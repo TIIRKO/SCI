@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="http://www.irko.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
+      <s:element name="GravarEnvio">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ParametroGravarEnvio" type="s0:ParametroGravarEnvio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ParametroGravarEnvio">
+        <s:sequence>
+          <s:element minOccurs="0" name="CdResposta">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2048" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DescResposta">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2048" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DhRecepcao">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2048" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="VersaoAplicativoRecepcao" type="s:string" />
+          <s:element minOccurs="0" name="ProtocoloEnvio" type="s:string" />
+          <s:element minOccurs="0" name="Ids" type="s0:ArrayOfIdsItemString" />
+          <s:element minOccurs="0" name="Ocorrencias" type="s0:ArrayOfOcorrenciaOcorrencia" />
+          <s:element minOccurs="0" name="CNPJTR" type="s:string" />
+          <s:element minOccurs="0" name="ArquivoXML" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfIdsItemString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="IdsItem" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfOcorrenciaOcorrencia">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ocorrencia" nillable="true" type="s0:Ocorrencia" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ocorrencia">
+        <s:sequence>
+          <s:element minOccurs="0" name="Codigo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Descricao">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2048" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Tipo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GravarEnvioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GravarEnvioResult" type="s0:ResultadoGravarEnvio" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoGravarEnvio">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Resultado">
+        <s:sequence>
+          <s:element minOccurs="0" name="Sucesso" type="s:boolean" />
+          <s:element minOccurs="0" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" name="DivisorLinha" type="s:string" />
+          <s:element minOccurs="0" name="Tag" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GravarRetorno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ListaParametroGravarRetorno" type="s0:ArrayOfParametroGravarRetornoParametroGravarRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfParametroGravarRetornoParametroGravarRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParametroGravarRetorno" nillable="true" type="s0:ParametroGravarRetorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParametroGravarRetorno">
+        <s:sequence>
+          <s:element minOccurs="0" name="Id">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CdResposta">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DescResposta">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2048" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="DhProcessamento">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="VersaoAplicativoProcessamento">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Ocorrencias" type="s0:ArrayOfOcorrenciaOcorrencia" />
+          <s:element minOccurs="0" name="NumeroRecibo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GravarRetornoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GravarRetornoResult" type="s0:ResultadoGravarRetorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoGravarRetorno">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ListarEventoPendente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarEventoPendenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarEventoPendenteResult" type="s0:ResultadoEventoPendente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoEventoPendente">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoResultadoEventoPendente" type="s0:ArrayOfTipoEventoTipoEvento" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfTipoEventoTipoEvento">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TipoEvento" nillable="true" type="s0:TipoEvento" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TipoEvento">
+        <s:sequence>
+          <s:element minOccurs="0" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarRetornoPendente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarRetornoPendenteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarRetornoPendenteResult" type="s0:ResultadoEventoPendente" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GravarEnvioSoapIn">
+    <wsdl:part name="parameters" element="s0:GravarEnvio" />
+  </wsdl:message>
+  <wsdl:message name="GravarEnvioSoapOut">
+    <wsdl:part name="parameters" element="s0:GravarEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarRetornoSoapIn">
+    <wsdl:part name="parameters" element="s0:GravarRetorno" />
+  </wsdl:message>
+  <wsdl:message name="GravarRetornoSoapOut">
+    <wsdl:part name="parameters" element="s0:GravarRetornoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarEventoPendenteSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarEventoPendente" />
+  </wsdl:message>
+  <wsdl:message name="ListarEventoPendenteSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarEventoPendenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarRetornoPendenteSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarRetornoPendente" />
+  </wsdl:message>
+  <wsdl:message name="ListarRetornoPendenteSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarRetornoPendenteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="GravarEnvio">
+      <wsdl:input message="s0:GravarEnvioSoapIn" />
+      <wsdl:output message="s0:GravarEnvioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarRetorno">
+      <wsdl:input message="s0:GravarRetornoSoapIn" />
+      <wsdl:output message="s0:GravarRetornoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarEventoPendente">
+      <wsdl:input message="s0:ListarEventoPendenteSoapIn" />
+      <wsdl:output message="s0:ListarEventoPendenteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarRetornoPendente">
+      <wsdl:input message="s0:ListarRetornoPendenteSoapIn" />
+      <wsdl:output message="s0:ListarRetornoPendenteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="s0:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GravarEnvio">
+      <soap:operation soapAction="http://www.irko.com.br/DCN.WebService.ESocial.GravarEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarRetorno">
+      <soap:operation soapAction="http://www.irko.com.br/DCN.WebService.ESocial.GravarRetorno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarEventoPendente">
+      <soap:operation soapAction="http://www.irko.com.br/DCN.WebService.ESocial.ListarEventoPendente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarRetornoPendente">
+      <soap:operation soapAction="http://www.irko.com.br/DCN.WebService.ESocial.ListarRetornoPendente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="s0:ServiceSoap">
+      <soap:address location="https://www.irko.com.br:443/csp/prgdcn/DCN.WebService.ESocial.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

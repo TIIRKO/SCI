@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="http://www.irko.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
+      <s:element name="CalcularFolha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+            <s:element minOccurs="0" name="CodigoFuncionario" type="s:string" />
+            <s:element minOccurs="0" name="TipoRegistro" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularFolhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="CalcularFolhaResult" type="s0:Resultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Resultado">
+        <s:sequence>
+          <s:element minOccurs="0" name="Sucesso" type="s:boolean" />
+          <s:element minOccurs="0" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" name="DivisorLinha" type="s:string" />
+          <s:element minOccurs="0" name="Tag" type="s:string" />
+          <s:element minOccurs="0" name="Stacks" type="s0:ArrayOfStackStack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStackStack">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Stack" nillable="true" type="s0:Stack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Stack">
+        <s:sequence>
+          <s:element minOccurs="0" name="Level" type="s:long" />
+          <s:element minOccurs="0" name="Place">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="MCode">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ECode">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoLogin">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoResultadoLogin" type="s0:Usuario" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Usuario">
+        <s:sequence>
+          <s:element name="Codigo" type="s:long" />
+          <s:element minOccurs="0" name="Nome" type="s:string" />
+          <s:element minOccurs="0" name="Senha" type="s:string" />
+          <s:element name="Status">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+                <s:enumeration value="2" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="DataInicio" type="s:date" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoMontarMenu">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoResultadoMontarMenu" type="s0:ArrayOfMenuMenu" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMenuMenu">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Menu" nillable="true" type="s0:Menu" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Menu">
+        <s:sequence>
+          <s:element minOccurs="0" name="MenusInferiores" type="s0:ArrayOfMenuMenu" />
+          <s:element name="Menu" type="s:string" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+          <s:element name="Tipo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+                <s:enumeration value="2" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="Status">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Namespace" type="s:string" />
+          <s:element minOccurs="0" name="Programa" type="s:string" />
+          <s:element minOccurs="0" name="Bloqueio">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+                <s:enumeration value="2" />
+                <s:enumeration value="3" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="PermiteTrocaEmpresa" type="s:boolean" />
+          <s:element minOccurs="0" name="PermiteMultiTela" type="s:boolean" />
+          <s:element minOccurs="0" name="OpcaoMenuCOS" type="s:string" />
+          <s:element minOccurs="0" name="PermiteEditar" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoListarEmpresa">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarEmpresa" type="s0:ArrayOfEmpresaEmpresa" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfEmpresaEmpresa">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Empresa" nillable="true" type="s0:Empresa" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Empresa">
+        <s:sequence>
+          <s:element name="Codigo" type="s:long" />
+          <s:element minOccurs="0" name="RazaoSocial">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="55" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CNPJCPF" type="s:string" />
+          <s:element minOccurs="0" name="Status">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoListarIdioma">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarIdioma" type="s0:ArrayOfIdiomaIdioma" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfIdiomaIdioma">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Idioma" nillable="true" type="s0:Idioma" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Idioma">
+        <s:sequence>
+          <s:element name="Codigo" type="s:string" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" name="Habilitado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoListarFuncionario">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarFuncionario" type="s0:ArrayOfFuncionarioFuncionario" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfFuncionarioFuncionario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Funcionario" nillable="true" type="s0:Funcionario" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Funcionario">
+        <s:sequence>
+          <s:element name="Codigo" type="s:long" />
+          <s:element minOccurs="0" name="Nome" type="s:string" />
+          <s:element minOccurs="0" name="Departamento" type="s0:Departamento" />
+          <s:element minOccurs="0" name="CentroCusto" type="s0:CentroCusto" />
+          <s:element minOccurs="0" name="Ativo" type="s:boolean" />
+          <s:element minOccurs="0" name="Admissao" type="s:date" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Departamento">
+        <s:sequence>
+          <s:element minOccurs="0" name="Codigo" type="s:long" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CentroCusto">
+        <s:sequence>
+          <s:element minOccurs="0" name="Codigo" type="s:string" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" name="Grupo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoListarVerba">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarVerba" type="s0:ArrayOfVerbaVerba" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfVerbaVerba">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Verba" nillable="true" type="s0:Verba" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Verba">
+        <s:sequence>
+          <s:element name="Codigo" type="s:long" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" name="Ativa" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoListarVerbaCadastrada">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarVerbaCadastrada" type="s0:ArrayOfRegistroRegistro" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfRegistroRegistro">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Registro" nillable="true" type="s0:Registro" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Registro">
+        <s:sequence>
+          <s:element minOccurs="0" name="Funcionario" type="s0:Funcionario" />
+          <s:element minOccurs="0" name="Competencia" type="s:string" />
+          <s:element minOccurs="0" name="Tipo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="300" />
+                <s:enumeration value="550" />
+                <s:enumeration value="450" />
+                <s:enumeration value="620" />
+                <s:enumeration value="650" />
+                <s:enumeration value="680" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="Fixa">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:enumeration value="0" />
+                <s:enumeration value="1" />
+                <s:enumeration value="2" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="TipoProvento" type="s:string" />
+          <s:element minOccurs="0" name="Verba" type="s0:Verba" />
+          <s:element minOccurs="0" name="Quantidade" type="s:decimal" />
+          <s:element minOccurs="0" name="Valor" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ResultadoRecuperarParametro">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="AnoMesAtual" type="s:string" />
+              <s:element minOccurs="0" name="VerbaSalario" type="s0:Verba" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ExcluirVerba">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+            <s:element minOccurs="0" name="CodigoFuncionario" type="s:string" />
+            <s:element minOccurs="0" name="TipoRegistro" type="s:string" />
+            <s:element minOccurs="0" name="TipoVerba" type="s:string" />
+            <s:element minOccurs="0" name="CodigoVerba" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExcluirVerbaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ExcluirVerbaResult" type="s0:Resultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FolhaCentroCusto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+            <s:element minOccurs="0" name="TipoRegistro" type="s:string" />
+            <s:element minOccurs="0" name="CodigoCentroCusto" type="s:string" />
+            <s:element minOccurs="0" name="CodigoFuncionario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FolhaCentroCustoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="FolhaCentroCustoResult" type="s0:ResultadoListarVerbaCadastrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarVerba">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+            <s:element minOccurs="0" name="CodigoFuncionario" type="s:string" />
+            <s:element minOccurs="0" name="TipoRegistro" type="s:string" />
+            <s:element minOccurs="0" name="TipoVerba" type="s:string" />
+            <s:element minOccurs="0" name="CodigoVerba" type="s:string" />
+            <s:element minOccurs="0" name="Quantidade" type="s:string" />
+            <s:element minOccurs="0" name="Valor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarVerbaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GravarVerbaResult" type="s0:Resultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarFuncionario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarFuncionarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarFuncionarioResult" type="s0:ResultadoListarFuncionario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarVerba">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarVerbaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarVerbaResult" type="s0:ResultadoListarVerba" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarVerbaCadastrada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+            <s:element minOccurs="0" name="CodigoFuncionario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarVerbaCadastradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarVerbaCadastradaResult" type="s0:ResultadoListarVerbaCadastrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarParametro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RecuperarParametroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="RecuperarParametroResult" type="s0:ResultadoRecuperarParametro" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CalcularFolhaSoapIn">
+    <wsdl:part name="parameters" element="s0:CalcularFolha" />
+  </wsdl:message>
+  <wsdl:message name="CalcularFolhaSoapOut">
+    <wsdl:part name="parameters" element="s0:CalcularFolhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExcluirVerbaSoapIn">
+    <wsdl:part name="parameters" element="s0:ExcluirVerba" />
+  </wsdl:message>
+  <wsdl:message name="ExcluirVerbaSoapOut">
+    <wsdl:part name="parameters" element="s0:ExcluirVerbaResponse" />
+  </wsdl:message>
+  <wsdl:message name="FolhaCentroCustoSoapIn">
+    <wsdl:part name="parameters" element="s0:FolhaCentroCusto" />
+  </wsdl:message>
+  <wsdl:message name="FolhaCentroCustoSoapOut">
+    <wsdl:part name="parameters" element="s0:FolhaCentroCustoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarVerbaSoapIn">
+    <wsdl:part name="parameters" element="s0:GravarVerba" />
+  </wsdl:message>
+  <wsdl:message name="GravarVerbaSoapOut">
+    <wsdl:part name="parameters" element="s0:GravarVerbaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarFuncionarioSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarFuncionario" />
+  </wsdl:message>
+  <wsdl:message name="ListarFuncionarioSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarFuncionarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarVerbaSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarVerba" />
+  </wsdl:message>
+  <wsdl:message name="ListarVerbaSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarVerbaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarVerbaCadastradaSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarVerbaCadastrada" />
+  </wsdl:message>
+  <wsdl:message name="ListarVerbaCadastradaSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarVerbaCadastradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarParametroSoapIn">
+    <wsdl:part name="parameters" element="s0:RecuperarParametro" />
+  </wsdl:message>
+  <wsdl:message name="RecuperarParametroSoapOut">
+    <wsdl:part name="parameters" element="s0:RecuperarParametroResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AcessoTrabalhistaSoap">
+    <wsdl:operation name="CalcularFolha">
+      <wsdl:input message="s0:CalcularFolhaSoapIn" />
+      <wsdl:output message="s0:CalcularFolhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirVerba">
+      <wsdl:input message="s0:ExcluirVerbaSoapIn" />
+      <wsdl:output message="s0:ExcluirVerbaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FolhaCentroCusto">
+      <wsdl:input message="s0:FolhaCentroCustoSoapIn" />
+      <wsdl:output message="s0:FolhaCentroCustoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarVerba">
+      <wsdl:input message="s0:GravarVerbaSoapIn" />
+      <wsdl:output message="s0:GravarVerbaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarFuncionario">
+      <wsdl:input message="s0:ListarFuncionarioSoapIn" />
+      <wsdl:output message="s0:ListarFuncionarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarVerba">
+      <wsdl:input message="s0:ListarVerbaSoapIn" />
+      <wsdl:output message="s0:ListarVerbaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarVerbaCadastrada">
+      <wsdl:input message="s0:ListarVerbaCadastradaSoapIn" />
+      <wsdl:output message="s0:ListarVerbaCadastradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarParametro">
+      <wsdl:input message="s0:RecuperarParametroSoapIn" />
+      <wsdl:output message="s0:RecuperarParametroSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AcessoTrabalhistaSoap" type="s0:AcessoTrabalhistaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CalcularFolha">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.CalcularFolha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExcluirVerba">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.ExcluirVerba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FolhaCentroCusto">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.FolhaCentroCusto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarVerba">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.GravarVerba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarFuncionario">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.ListarFuncionario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarVerba">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.ListarVerba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarVerbaCadastrada">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.ListarVerbaCadastrada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperarParametro">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.Trabalhista.RecuperarParametro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AcessoTrabalhista">
+    <wsdl:port name="AcessoTrabalhistaSoap" binding="s0:AcessoTrabalhistaSoap">
+      <soap:address location="http://128.0.0.5:57773/csp/user/WebService.Trabalhista.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="http://www.irko.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
+      <s:element name="Campo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="Campo" type="s:string" />
+            <s:element minOccurs="0" name="CodigoIdioma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CampoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="CampoResult" type="s0:ResultadoCampo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoCampo">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoCampo" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Resultado">
+        <s:sequence>
+          <s:element minOccurs="0" name="Sucesso" type="s:boolean" />
+          <s:element minOccurs="0" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" name="DivisorLinha" type="s:string" />
+          <s:element minOccurs="0" name="Tag" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarIdiomas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarIdiomasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarIdiomasResult" type="s0:ResultadoListarIdioma" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoListarIdioma">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoListarIdioma" type="s0:ArrayOfIdiomaIdioma" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfIdiomaIdioma">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Idioma" nillable="true" type="s0:Idioma" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Idioma">
+        <s:sequence>
+          <s:element name="Codigo" type="s:string" />
+          <s:element minOccurs="0" name="Descricao" type="s:string" />
+          <s:element minOccurs="0" name="Habilitado" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListarIdiomasHabilitados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListarIdiomasHabilitadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListarIdiomasHabilitadosResult" type="s0:ResultadoListarIdioma" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CampoSoapIn">
+    <wsdl:part name="parameters" element="s0:Campo" />
+  </wsdl:message>
+  <wsdl:message name="CampoSoapOut">
+    <wsdl:part name="parameters" element="s0:CampoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarIdiomasSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarIdiomas" />
+  </wsdl:message>
+  <wsdl:message name="ListarIdiomasSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarIdiomasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarIdiomasHabilitadosSoapIn">
+    <wsdl:part name="parameters" element="s0:ListarIdiomasHabilitados" />
+  </wsdl:message>
+  <wsdl:message name="ListarIdiomasHabilitadosSoapOut">
+    <wsdl:part name="parameters" element="s0:ListarIdiomasHabilitadosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Campo">
+      <wsdl:input message="s0:CampoSoapIn" />
+      <wsdl:output message="s0:CampoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarIdiomas">
+      <wsdl:input message="s0:ListarIdiomasSoapIn" />
+      <wsdl:output message="s0:ListarIdiomasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarIdiomasHabilitados">
+      <wsdl:input message="s0:ListarIdiomasHabilitadosSoapIn" />
+      <wsdl:output message="s0:ListarIdiomasHabilitadosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="s0:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Campo">
+      <soap:operation soapAction="http://www.irko.com.br/ADM.WebService.Idioma.Campo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarIdiomas">
+      <soap:operation soapAction="http://www.irko.com.br/ADM.WebService.Idioma.ListarIdiomas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarIdiomasHabilitados">
+      <soap:operation soapAction="http://www.irko.com.br/ADM.WebService.Idioma.ListarIdiomasHabilitados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="s0:ServiceSoap">
+      <soap:address location="http://187.32.61.1:57772/csp/admsys/ADM.WebService.Idioma.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

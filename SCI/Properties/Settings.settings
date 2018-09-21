@@ -1,0 +1,99 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SCI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SCI_Acesso_Acesso" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Acesso.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Idioma_Idioma" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Idioma.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Corporativo_CorporativoService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Corporativo.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Trabalhista_AcessoTrabalhista" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://128.0.0.5:57773/csp/user/WebService.Trabalhista.cls</Value>
+    </Setting>
+    <Setting Name="SCI_IRKDesktop_GetData" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/WebService.IRKDesktop.cls</Value>
+    </Setting>
+    <Setting Name="SCI_DCTF_DCTFService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://128.0.0.5:57773/csp/user/WebService.DCTF.cls</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_ProducaoRestrita_ServicoEnviarLoteEventos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc</Value>
+    </Setting>
+    <Setting Name="SCI_teste_CadConsultaCadastro2" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://nfe.fazenda.sp.gov.br/ws/cadconsultacadastro2.asmx</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_ProducaoRestrita_Retorno_ServicoConsultarLoteEventos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/consultarloteeventos/WsConsultarLoteEventos.svc</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/prgtrb/TRB.WebService.ESocial.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_ProducaoRestrita_Envio_RecepcaoLoteReinf" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://preprodefdreinf.receita.fazenda.gov.br/WsREINF/RecepcaoLoteReinf.svc</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_Irko_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/prgdcn/DCN.WebService.Reinf.cls</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_Producao_Envio_ServicoEnviarLoteEventos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.envio.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_Producao_Retorno_ServicoConsultarLoteEventos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.consulta.esocial.gov.br/servicos/empregador/consultarloteeventos/WsConsultarLoteEventos.svc</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_ProducaoRestrita_Envio_ServicoEnviarLoteEventos" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://webservices.producaorestrita.esocial.gov.br/servicos/empregador/enviarloteeventos/WsEnviarLoteEventos.svc</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_IRKO_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/prgtrb/TRB.WebService.ESocial.cls</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_IRKO_DCTF_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/prgdcn/DCN.WebService.ESocial.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_ProducaoRestrita_Retorno_ConsultasReinf" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://preprodefdreinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_Producao_Envio_RecepcaoLoteReinf" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://reinf.receita.fazenda.gov.br/WsREINF/RecepcaoLoteReinf.svc</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_Producao_Retorno_ConsultasReinf" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://reinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc</Value>
+    </Setting>
+    <Setting Name="SCI_Acesso_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/admsys/ADM.WebService.Acesso.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Corporativo_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/admsys/ADM.WebService.Corporativo.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Idioma_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/admsys/ADM.WebService.Idioma.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Sistema_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/admsys/ADM.WebService.Sistema.cls</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/prgtrb/TRB.WebService.ESocial.cls</Value>
+    </Setting>
+    <Setting Name="SCI_ESocial_IRKOMPACTA_DCTF_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/prgdcn/DCN.WebService.ESocial.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Reinf_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.32.61.1:57772/csp/prgdcn/DCN.WebService.Reinf.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Acesso_IRKO_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Acesso.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Idioma_IRKO_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Idioma.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Sistema_IRKO_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Sistema.cls</Value>
+    </Setting>
+    <Setting Name="SCI_Corporativo_IRKO_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.irko.com.br:443/csp/admsys/ADM.WebService.Corporativo.cls</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

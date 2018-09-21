@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="http://www.irko.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
+      <s:element name="ImportarArquivoLancamentoLote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="Guid" type="s:string" />
+            <s:element minOccurs="0" name="Lancamentos" type="s0:ArrayOfLancamentosItemString" />
+            <s:element minOccurs="0" name="ANOMES" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLancamentosItemString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LancamentosItem" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ImportarArquivoLancamentoLoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ImportarArquivoLancamentoLoteResult" type="s0:ResultadoImportarArquivoLancamento" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ResultadoImportarArquivoLancamento">
+        <s:complexContent mixed="false">
+          <s:extension base="s0:Resultado">
+            <s:sequence>
+              <s:element minOccurs="0" name="RetornoImportarArquivoLancamento" type="s0:ArrayOfRetornoImportarArquivoLancamentoItemString" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Resultado">
+        <s:sequence>
+          <s:element minOccurs="0" name="Sucesso" type="s:boolean" />
+          <s:element minOccurs="0" name="Mensagem" type="s:string" />
+          <s:element minOccurs="0" name="DivisorLinha" type="s:string" />
+          <s:element minOccurs="0" name="Tag" type="s:string" />
+          <s:element minOccurs="0" name="Stacks" type="s0:ArrayOfStackStack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfStackStack">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Stack" nillable="true" type="s0:Stack" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Stack">
+        <s:sequence>
+          <s:element minOccurs="0" name="Level" type="s:long" />
+          <s:element minOccurs="0" name="Place">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="MCode">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ECode">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1026" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRetornoImportarArquivoLancamentoItemString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RetornoImportarArquivoLancamentoItem" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ImportarArquivoLancamentoLoteSoapIn">
+    <wsdl:part name="parameters" element="s0:ImportarArquivoLancamentoLote" />
+  </wsdl:message>
+  <wsdl:message name="ImportarArquivoLancamentoLoteSoapOut">
+    <wsdl:part name="parameters" element="s0:ImportarArquivoLancamentoLoteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DCTFServiceSoap">
+    <wsdl:operation name="ImportarArquivoLancamentoLote">
+      <wsdl:input message="s0:ImportarArquivoLancamentoLoteSoapIn" />
+      <wsdl:output message="s0:ImportarArquivoLancamentoLoteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DCTFServiceSoap" type="s0:DCTFServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ImportarArquivoLancamentoLote">
+      <soap:operation soapAction="http://www.irko.com.br/WebService.DCTF.ImportarArquivoLancamentoLote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DCTFService">
+    <wsdl:port name="DCTFServiceSoap" binding="s0:DCTFServiceSoap">
+      <soap:address location="http://128.0.0.5:57773/csp/user/WebService.DCTF.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

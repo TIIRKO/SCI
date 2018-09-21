@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:s0="https://www.irko.com.br/csp/admsys" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="https://www.irko.com.br/csp/admsys" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://www.irko.com.br/csp/admsys">
+      <s:element name="CheckRotina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="rotina" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckRotinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="CheckRotinaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditaTela">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="rotina" type="s:string" />
+            <s:element minOccurs="0" name="idioma" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditaTelaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="EditaTelaResult" type="s0:ZWWW" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ZWWW">
+        <s:sequence>
+          <s:element minOccurs="0" name="n1" type="s0:ArrayOfEditaTelaEditaTela" />
+          <s:element minOccurs="0" name="n0" type="s:string" />
+          <s:element minOccurs="0" name="n2" type="s0:ArrayOfEditaTelaEditaTela" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEditaTelaEditaTela">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EditaTela" nillable="true" type="s0:EditaTela" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EditaTela">
+        <s:sequence>
+          <s:element minOccurs="0" name="campo" type="s:string" />
+          <s:element minOccurs="0" name="rot" type="s:string" />
+          <s:element minOccurs="0" name="z0" type="s:string" />
+          <s:element minOccurs="0" name="qtdcam" type="s:string" />
+          <s:element minOccurs="0" name="tiptel" type="s:string" />
+          <s:element minOccurs="0" name="coldsk" type="s:string" />
+          <s:element minOccurs="0" name="coltab" type="s:string" />
+          <s:element minOccurs="0" name="colmob" type="s:string" />
+          <s:element minOccurs="0" name="desrot" type="s:string" />
+          <s:element minOccurs="0" name="nomcam" type="s:string" />
+          <s:element minOccurs="0" name="habcam" type="s:string" />
+          <s:element minOccurs="0" name="prgint" type="s:string" />
+          <s:element minOccurs="0" name="tipcam" type="s:string" />
+          <s:element minOccurs="0" name="tooltip" type="s:string" />
+          <s:element minOccurs="0" name="printd" type="s:string" />
+          <s:element minOccurs="0" name="desmen" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GUARDAMNU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="OPTMNU" type="s:string" />
+            <s:element minOccurs="0" name="IDIOMA" type="s:string" />
+            <s:element minOccurs="0" name="USER" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GUARDAMNUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="GUARDAMNUResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="KILLLL">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="KILLLLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="KILLLLResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaCodemp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="CODUSU" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListaCodempResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="ListaCodempResult" type="s0:ArrayOfListaCodempResultItemPairOfListaCodempResultKeyString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfListaCodempResultItemPairOfListaCodempResultKeyString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ListaCodempResultItem" nillable="true" type="s0:PairOfListaCodempResultKeyString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PairOfListaCodempResultKeyString">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="ListaCodempResultKey" type="s:string" use="required" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:element name="MNU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="codUsu" type="s:long" />
+            <s:element minOccurs="0" name="lang" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MNUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="MNUResult" type="s0:MNU" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MNU">
+        <s:sequence>
+          <s:element minOccurs="0" name="GRPROT" type="s0:ArrayOfGRPROTGRPROT" />
+          <s:element minOccurs="0" name="CODUSU" type="s:string" />
+          <s:element minOccurs="0" name="MSGSDC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGRPROTGRPROT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GRPROT" nillable="true" type="s0:GRPROT" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GRPROT">
+        <s:sequence>
+          <s:element minOccurs="0" name="DESGRP" type="s:string" />
+          <s:element minOccurs="0" name="SUBGRP" type="s0:ArrayOfSUBGRPSUBGRP" />
+        </s:sequence>
+        <s:attribute name="id" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfSUBGRPSUBGRP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SUBGRP" nillable="true" type="s0:SUBGRP" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SUBGRP">
+        <s:sequence>
+          <s:element minOccurs="0" name="DESSGR" type="s:string" />
+          <s:element minOccurs="0" name="PAI" type="s:string" />
+          <s:element minOccurs="0" name="OPTMNU" type="s0:ArrayOfREGMNUREGMNU" />
+        </s:sequence>
+        <s:attribute name="id" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfREGMNUREGMNU">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="REGMNU" nillable="true" type="s0:REGMNU" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="REGMNU">
+        <s:sequence>
+          <s:element minOccurs="0" name="DESROT" type="s:string" />
+          <s:element minOccurs="0" name="UCIROT" type="s:string" />
+          <s:element minOccurs="0" name="PRGROT" type="s:string" />
+          <s:element minOccurs="0" name="OPTMNU" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SETATELA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="R" type="s:string" />
+            <s:element minOccurs="0" name="NR" type="s:string" />
+            <s:element minOccurs="0" name="Z0" type="s:string" />
+            <s:element minOccurs="0" name="QC" type="s:string" />
+            <s:element minOccurs="0" name="TR" type="s:string" />
+            <s:element minOccurs="0" name="CD" type="s:string" />
+            <s:element minOccurs="0" name="CT" type="s:string" />
+            <s:element minOccurs="0" name="CM" type="s:string" />
+            <s:element minOccurs="0" name="I" type="s:string" />
+            <s:element minOccurs="0" name="PA" type="s:string" />
+            <s:element minOccurs="0" name="DE" type="s:string" />
+            <s:element minOccurs="0" name="NC" type="s:string" />
+            <s:element minOccurs="0" name="HC" type="s:string" />
+            <s:element minOccurs="0" name="PI" type="s:string" />
+            <s:element minOccurs="0" name="TC" type="s:string" />
+            <s:element minOccurs="0" name="TT" type="s:string" />
+            <s:element minOccurs="0" name="DM" type="s:string" />
+            <s:element minOccurs="0" name="DI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SETATELAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="SETATELAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SIMNAO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PROG" type="s:string" />
+            <s:element minOccurs="0" name="VALOR" type="s:string" />
+            <s:element minOccurs="0" name="CODFUN" type="s:string" />
+            <s:element minOccurs="0" name="CODEMP" type="s:string" />
+            <s:element minOccurs="0" name="posicao" type="s:string" />
+            <s:element minOccurs="0" name="Sessao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SIMNAOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="SIMNAOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TesteESocial">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="TesteESocialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="TesteESocialResult" type="s0:ArrayOfTesteESocialResultItemString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTesteESocialResultItemString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TesteESocialResultItem" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UsoLicenca">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="UsoLicencaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="UsoLicencaResult" type="s0:ArrayOfUsoLicencaResultItemPairOfUsoLicencaResultKeyString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsoLicencaResultItemPairOfUsoLicencaResultKeyString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UsoLicencaResultItem" nillable="true" type="s0:PairOfUsoLicencaResultKeyString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PairOfUsoLicencaResultKeyString">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="UsoLicencaResultKey" type="s:string" use="required" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:element name="UsoSistema">
+        <s:complexType>
+          <s:sequence />
+        </s:complexType>
+      </s:element>
+      <s:element name="UsoSistemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="UsoSistemaResult" type="s0:ArrayOfUsoSistemaResultItemPairOfUsoSistemaResultKeyLong" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUsoSistemaResultItemPairOfUsoSistemaResultKeyLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UsoSistemaResultItem" nillable="true" type="s0:PairOfUsoSistemaResultKeyLong" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PairOfUsoSistemaResultKeyLong">
+        <s:simpleContent>
+          <s:extension base="s:long">
+            <s:attribute name="UsoSistemaResultKey" type="s:string" use="required" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:element name="VALIDA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="USU" type="s:string" />
+            <s:element minOccurs="0" name="PWD" type="s:string" />
+            <s:element minOccurs="0" name="COD" type="s:string" />
+            <s:element minOccurs="0" name="LAG" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VALIDAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="VALIDAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="camposROT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PROG" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="camposROTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="camposROTResult" type="s0:telaRotina" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="telaRotina">
+        <s:sequence>
+          <s:element minOccurs="0" name="ERR" type="s:boolean" />
+          <s:element minOccurs="0" name="titulo" type="s:string" />
+          <s:element minOccurs="0" name="campo" type="s0:ArrayOfcampoRotinacampoRotina" />
+          <s:element minOccurs="0" name="IL" type="s:string" />
+          <s:element minOccurs="0" name="colDes" type="s:long" />
+          <s:element minOccurs="0" name="colTab" type="s:long" />
+          <s:element minOccurs="0" name="colMob" type="s:long" />
+        </s:sequence>
+        <s:attribute name="tipotela" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfcampoRotinacampoRotina">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="campoRotina" nillable="true" type="s0:campoRotina" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="campoRotina">
+        <s:sequence>
+          <s:element minOccurs="0" name="descCampo" type="s:string" />
+          <s:element minOccurs="0" name="nomeCampo" type="s:string" />
+          <s:element minOccurs="0" name="habiCampo" type="s:boolean" />
+          <s:element minOccurs="0" name="inteCampo" type="s:string" />
+          <s:element minOccurs="0" name="tipoCampo" type="s:long" />
+          <s:element minOccurs="0" name="espeCampo" type="s:boolean" />
+          <s:element minOccurs="0" name="tooltip" type="s:string" />
+          <s:element minOccurs="0" name="xCampo" type="s:string" />
+          <s:element minOccurs="0" name="yCampo" type="s:string" />
+          <s:element minOccurs="0" name="lCampo" type="s:string" />
+          <s:element minOccurs="0" name="dupliInt" type="s:string" />
+        </s:sequence>
+        <s:attribute name="boxCampo" type="s:string" />
+      </s:complexType>
+      <s:element name="consiste">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PROG" type="s:string" />
+            <s:element minOccurs="0" name="VALOR" type="s:string" />
+            <s:element minOccurs="0" name="CODFUN" type="s:string" />
+            <s:element minOccurs="0" name="CODEMP" type="s:string" />
+            <s:element minOccurs="0" name="posicao" type="s:string" />
+            <s:element minOccurs="0" name="Sessao" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consisteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="consisteResult" type="s0:campoConsiste" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="campoConsiste">
+        <s:sequence>
+          <s:element minOccurs="0" name="linhas" type="s0:ArrayOfretornoretorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfretornoretorno">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="retorno" nillable="true" type="s0:retorno" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="retorno">
+        <s:sequence>
+          <s:element minOccurs="0" name="ER" type="s:long" />
+          <s:element minOccurs="0" name="ERR" type="s:string" />
+          <s:element minOccurs="0" name="DISPLAYERR" type="s:string" />
+          <s:element minOccurs="0" name="voltaCAMPO" type="s:string" />
+          <s:element minOccurs="0" name="avancaCAMPO" type="s:string" />
+          <s:element minOccurs="0" name="UP" type="s:long" />
+          <s:element minOccurs="0" name="JOB" type="s:string" />
+          <s:element minOccurs="0" name="flag" type="s:boolean" />
+          <s:element minOccurs="0" name="WU" type="s:boolean" />
+        </s:sequence>
+        <s:attribute name="flagava" type="s:boolean" />
+      </s:complexType>
+      <s:element name="consisteBtnR">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="PROGRA" type="s:string" />
+            <s:element minOccurs="0" name="CODFUN" type="s:string" />
+            <s:element minOccurs="0" name="CODEMP" type="s:string" />
+            <s:element minOccurs="0" name="campoId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consisteBtnRResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="consisteBtnRResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="rotina" type="s:string" />
+            <s:element minOccurs="0" name="valor" type="s:string" />
+            <s:element minOccurs="0" name="CoDfUn" type="s:string" />
+            <s:element minOccurs="0" name="I" type="s:string" />
+            <s:element minOccurs="0" name="CODEMP" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="consultaResult" type="s0:consulta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="consulta">
+        <s:sequence>
+          <s:element minOccurs="0" name="titulo" type="s:string" />
+          <s:element minOccurs="0" name="insereLinhas" type="s0:ArrayOflinhaslinhas" />
+        </s:sequence>
+        <s:attribute name="id" type="s:boolean" />
+      </s:complexType>
+      <s:complexType name="ArrayOflinhaslinhas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="linhas" nillable="true" type="s0:linhas" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="linhas">
+        <s:sequence>
+          <s:element minOccurs="0" name="linhas" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="exit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="OPCKILL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="exitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="exitResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVlDigitado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="JOB" type="s:string" />
+            <s:element minOccurs="0" name="CAMPO" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getVlDigitadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="getVlDigitadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="killl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="codUsu" type="s:string" />
+            <s:element minOccurs="0" name="cOdEmP" type="s:string" />
+            <s:element minOccurs="0" name="opc" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="killlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="killlResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setPWD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="CODUSU" type="s:string" />
+            <s:element minOccurs="0" name="PWD" type="s:string" />
+            <s:element minOccurs="0" name="REPWD" type="s:string" />
+            <s:element minOccurs="0" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setPWDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="setPWDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setRELWEB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="WROT" type="s:string" />
+            <s:element minOccurs="0" name="USUARI" type="s:string" />
+            <s:element minOccurs="0" name="CODEMP" type="s:string" />
+            <s:element minOccurs="0" name="campoId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setRELWEBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="setRELWEBResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaCODEM">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="cOdEmP" type="s:string" />
+            <s:element minOccurs="0" name="codUsu" type="s:string" />
+            <s:element minOccurs="0" name="lang" type="s:string" />
+            <s:element minOccurs="0" name="Session" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaCODEMResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="validaCODEMResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaCODUSU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="codUsu" type="s:string" />
+            <s:element minOccurs="0" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaCODUSUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="validaCODUSUResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaPWD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" name="SeNhA" type="s:string" />
+            <s:element minOccurs="0" name="codUsu" type="s:long" />
+            <s:element minOccurs="0" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validaPWDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element name="validaPWDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CheckRotinaSoapIn">
+    <wsdl:part name="parameters" element="s0:CheckRotina" />
+  </wsdl:message>
+  <wsdl:message name="CheckRotinaSoapOut">
+    <wsdl:part name="parameters" element="s0:CheckRotinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditaTelaSoapIn">
+    <wsdl:part name="parameters" element="s0:EditaTela" />
+  </wsdl:message>
+  <wsdl:message name="EditaTelaSoapOut">
+    <wsdl:part name="parameters" element="s0:EditaTelaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GUARDAMNUSoapIn">
+    <wsdl:part name="parameters" element="s0:GUARDAMNU" />
+  </wsdl:message>
+  <wsdl:message name="GUARDAMNUSoapOut">
+    <wsdl:part name="parameters" element="s0:GUARDAMNUResponse" />
+  </wsdl:message>
+  <wsdl:message name="KILLLLSoapIn">
+    <wsdl:part name="parameters" element="s0:KILLLL" />
+  </wsdl:message>
+  <wsdl:message name="KILLLLSoapOut">
+    <wsdl:part name="parameters" element="s0:KILLLLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListaCodempSoapIn">
+    <wsdl:part name="parameters" element="s0:ListaCodemp" />
+  </wsdl:message>
+  <wsdl:message name="ListaCodempSoapOut">
+    <wsdl:part name="parameters" element="s0:ListaCodempResponse" />
+  </wsdl:message>
+  <wsdl:message name="MNUSoapIn">
+    <wsdl:part name="parameters" element="s0:MNU" />
+  </wsdl:message>
+  <wsdl:message name="MNUSoapOut">
+    <wsdl:part name="parameters" element="s0:MNUResponse" />
+  </wsdl:message>
+  <wsdl:message name="SETATELASoapIn">
+    <wsdl:part name="parameters" element="s0:SETATELA" />
+  </wsdl:message>
+  <wsdl:message name="SETATELASoapOut">
+    <wsdl:part name="parameters" element="s0:SETATELAResponse" />
+  </wsdl:message>
+  <wsdl:message name="SIMNAOSoapIn">
+    <wsdl:part name="parameters" element="s0:SIMNAO" />
+  </wsdl:message>
+  <wsdl:message name="SIMNAOSoapOut">
+    <wsdl:part name="parameters" element="s0:SIMNAOResponse" />
+  </wsdl:message>
+  <wsdl:message name="TesteESocialSoapIn">
+    <wsdl:part name="parameters" element="s0:TesteESocial" />
+  </wsdl:message>
+  <wsdl:message name="TesteESocialSoapOut">
+    <wsdl:part name="parameters" element="s0:TesteESocialResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsoLicencaSoapIn">
+    <wsdl:part name="parameters" element="s0:UsoLicenca" />
+  </wsdl:message>
+  <wsdl:message name="UsoLicencaSoapOut">
+    <wsdl:part name="parameters" element="s0:UsoLicencaResponse" />
+  </wsdl:message>
+  <wsdl:message name="UsoSistemaSoapIn">
+    <wsdl:part name="parameters" element="s0:UsoSistema" />
+  </wsdl:message>
+  <wsdl:message name="UsoSistemaSoapOut">
+    <wsdl:part name="parameters" element="s0:UsoSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="VALIDASoapIn">
+    <wsdl:part name="parameters" element="s0:VALIDA" />
+  </wsdl:message>
+  <wsdl:message name="VALIDASoapOut">
+    <wsdl:part name="parameters" element="s0:VALIDAResponse" />
+  </wsdl:message>
+  <wsdl:message name="camposROTSoapIn">
+    <wsdl:part name="parameters" element="s0:camposROT" />
+  </wsdl:message>
+  <wsdl:message name="camposROTSoapOut">
+    <wsdl:part name="parameters" element="s0:camposROTResponse" />
+  </wsdl:message>
+  <wsdl:message name="consisteSoapIn">
+    <wsdl:part name="parameters" element="s0:consiste" />
+  </wsdl:message>
+  <wsdl:message name="consisteSoapOut">
+    <wsdl:part name="parameters" element="s0:consisteResponse" />
+  </wsdl:message>
+  <wsdl:message name="consisteBtnRSoapIn">
+    <wsdl:part name="parameters" element="s0:consisteBtnR" />
+  </wsdl:message>
+  <wsdl:message name="consisteBtnRSoapOut">
+    <wsdl:part name="parameters" element="s0:consisteBtnRResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultaSoapIn">
+    <wsdl:part name="parameters" element="s0:consulta" />
+  </wsdl:message>
+  <wsdl:message name="consultaSoapOut">
+    <wsdl:part name="parameters" element="s0:consultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="exitSoapIn">
+    <wsdl:part name="parameters" element="s0:exit" />
+  </wsdl:message>
+  <wsdl:message name="exitSoapOut">
+    <wsdl:part name="parameters" element="s0:exitResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVlDigitadoSoapIn">
+    <wsdl:part name="parameters" element="s0:getVlDigitado" />
+  </wsdl:message>
+  <wsdl:message name="getVlDigitadoSoapOut">
+    <wsdl:part name="parameters" element="s0:getVlDigitadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="killlSoapIn">
+    <wsdl:part name="parameters" element="s0:killl" />
+  </wsdl:message>
+  <wsdl:message name="killlSoapOut">
+    <wsdl:part name="parameters" element="s0:killlResponse" />
+  </wsdl:message>
+  <wsdl:message name="setPWDSoapIn">
+    <wsdl:part name="parameters" element="s0:setPWD" />
+  </wsdl:message>
+  <wsdl:message name="setPWDSoapOut">
+    <wsdl:part name="parameters" element="s0:setPWDResponse" />
+  </wsdl:message>
+  <wsdl:message name="setRELWEBSoapIn">
+    <wsdl:part name="parameters" element="s0:setRELWEB" />
+  </wsdl:message>
+  <wsdl:message name="setRELWEBSoapOut">
+    <wsdl:part name="parameters" element="s0:setRELWEBResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaCODEMSoapIn">
+    <wsdl:part name="parameters" element="s0:validaCODEM" />
+  </wsdl:message>
+  <wsdl:message name="validaCODEMSoapOut">
+    <wsdl:part name="parameters" element="s0:validaCODEMResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaCODUSUSoapIn">
+    <wsdl:part name="parameters" element="s0:validaCODUSU" />
+  </wsdl:message>
+  <wsdl:message name="validaCODUSUSoapOut">
+    <wsdl:part name="parameters" element="s0:validaCODUSUResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaPWDSoapIn">
+    <wsdl:part name="parameters" element="s0:validaPWD" />
+  </wsdl:message>
+  <wsdl:message name="validaPWDSoapOut">
+    <wsdl:part name="parameters" element="s0:validaPWDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetDataSoap">
+    <wsdl:operation name="CheckRotina">
+      <wsdl:input message="s0:CheckRotinaSoapIn" />
+      <wsdl:output message="s0:CheckRotinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditaTela">
+      <wsdl:input message="s0:EditaTelaSoapIn" />
+      <wsdl:output message="s0:EditaTelaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GUARDAMNU">
+      <wsdl:input message="s0:GUARDAMNUSoapIn" />
+      <wsdl:output message="s0:GUARDAMNUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="KILLLL">
+      <wsdl:input message="s0:KILLLLSoapIn" />
+      <wsdl:output message="s0:KILLLLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListaCodemp">
+      <wsdl:input message="s0:ListaCodempSoapIn" />
+      <wsdl:output message="s0:ListaCodempSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MNU">
+      <wsdl:input message="s0:MNUSoapIn" />
+      <wsdl:output message="s0:MNUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SETATELA">
+      <wsdl:input message="s0:SETATELASoapIn" />
+      <wsdl:output message="s0:SETATELASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SIMNAO">
+      <wsdl:input message="s0:SIMNAOSoapIn" />
+      <wsdl:output message="s0:SIMNAOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TesteESocial">
+      <wsdl:input message="s0:TesteESocialSoapIn" />
+      <wsdl:output message="s0:TesteESocialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsoLicenca">
+      <wsdl:input message="s0:UsoLicencaSoapIn" />
+      <wsdl:output message="s0:UsoLicencaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UsoSistema">
+      <wsdl:input message="s0:UsoSistemaSoapIn" />
+      <wsdl:output message="s0:UsoSistemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VALIDA">
+      <wsdl:input message="s0:VALIDASoapIn" />
+      <wsdl:output message="s0:VALIDASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="camposROT">
+      <wsdl:input message="s0:camposROTSoapIn" />
+      <wsdl:output message="s0:camposROTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consiste">
+      <wsdl:input message="s0:consisteSoapIn" />
+      <wsdl:output message="s0:consisteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consisteBtnR">
+      <wsdl:input message="s0:consisteBtnRSoapIn" />
+      <wsdl:output message="s0:consisteBtnRSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <wsdl:input message="s0:consultaSoapIn" />
+      <wsdl:output message="s0:consultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="exit">
+      <wsdl:input message="s0:exitSoapIn" />
+      <wsdl:output message="s0:exitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getVlDigitado">
+      <wsdl:input message="s0:getVlDigitadoSoapIn" />
+      <wsdl:output message="s0:getVlDigitadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="killl">
+      <wsdl:input message="s0:killlSoapIn" />
+      <wsdl:output message="s0:killlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setPWD">
+      <wsdl:input message="s0:setPWDSoapIn" />
+      <wsdl:output message="s0:setPWDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setRELWEB">
+      <wsdl:input message="s0:setRELWEBSoapIn" />
+      <wsdl:output message="s0:setRELWEBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaCODEM">
+      <wsdl:input message="s0:validaCODEMSoapIn" />
+      <wsdl:output message="s0:validaCODEMSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaCODUSU">
+      <wsdl:input message="s0:validaCODUSUSoapIn" />
+      <wsdl:output message="s0:validaCODUSUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validaPWD">
+      <wsdl:input message="s0:validaPWDSoapIn" />
+      <wsdl:output message="s0:validaPWDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetDataSoap" type="s0:GetDataSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CheckRotina">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.CheckRotina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditaTela">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.EditaTela" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GUARDAMNU">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.GUARDAMNU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="KILLLL">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.KILLLL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListaCodemp">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.ListaCodemp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MNU">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.MNU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SETATELA">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.SETATELA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SIMNAO">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.SIMNAO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TesteESocial">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.TesteESocial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsoLicenca">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.UsoLicenca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UsoSistema">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.UsoSistema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VALIDA">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.VALIDA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="camposROT">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.camposROT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consiste">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.consiste" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consisteBtnR">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.consisteBtnR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.consulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="exit">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.exit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getVlDigitado">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.getVlDigitado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="killl">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.killl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPWD">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.setPWD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRELWEB">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.setRELWEB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaCODEM">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.validaCODEM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaCODUSU">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.validaCODUSU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validaPWD">
+      <soap:operation soapAction="https://www.irko.com.br/csp/admsys/WebService.IRKDesktop.validaPWD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetData">
+    <wsdl:port name="GetDataSoap" binding="s0:GetDataSoap">
+      <soap:address location="https://www.irko.com.br:443/csp/admsys/WebService.IRKDesktop.cls" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
