@@ -213,7 +213,6 @@ namespace SCI.View.DCTF.REINF
 
                                     XmlDocument _docRetorno = new XmlDocument();
                                     _docRetorno.LoadXml(_retorno.OuterXml);
-
                                     XmlElement _retornoElement = _docRetorno.DocumentElement;
 
                                     Reinf.Irko.ResultadoGravarRetornoEvento _retornoWR = GravarEnvio(_retorno, _listaId, _cnpjTransmissao, ((SCI.Reinf.Irko.TipoEvento)_check.Tag).Codigo);
