@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns5="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:ns4="http://www.w3.org/2000/09/xmldsig#" xmlns:s0="http://www.irko.com.br" xmlns:ns3="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns5="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:ns4="http://www.w3.org/2000/09/xmldsig#" xmlns:s0="http://www.irko.com.br" xmlns:ns3="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" />
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02" />
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" />
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00" />
       <s:element name="GravarRetornoEvento">
         <s:complexType>
           <s:sequence>
@@ -133,8 +133,8 @@
         </s:complexContent>
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02">
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" />
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" />
       <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <s:complexType name="Reinf">
         <s:sequence>
@@ -155,7 +155,7 @@
           <s:element name="IdTransmissor">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="14" />
+                <s:maxLength value="250" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
@@ -235,8 +235,8 @@
         <s:attribute name="id" type="s:string" use="required" />
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02">
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02" />
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" />
       <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <s:element name="Reinf" type="ns3:Reinf" />
       <s:complexType name="Reinf">
@@ -287,7 +287,6 @@
           <s:element name="nrInsc">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{11}|[0-9]{8}|[0-9]{14}" />
                 <s:maxLength value="14" />
                 <s:minLength value="8" />
               </s:restriction>
@@ -354,7 +353,7 @@
           <s:element name="dscResp">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="255" />
+                <s:maxLength value="1024" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
@@ -366,8 +365,8 @@
           <s:element minOccurs="0" name="nrProtEntr">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="49" />
-                <s:minLength value="49" />
+                <s:maxLength value="2000" />
+                <s:minLength value="0" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -408,6 +407,25 @@
               </s:restriction>
             </s:simpleType>
           </s:element>
+          <s:element minOccurs="0" name="ideEstab" type="ns3:ideEstab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideEstab">
+        <s:sequence>
+          <s:element name="tpInsc">
+            <s:simpleType>
+              <s:restriction base="s:unsignedByte">
+                <s:pattern value="[1|4]" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="nrInsc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
           <s:element minOccurs="0" name="RTom" type="ns3:RTom" />
           <s:element minOccurs="0" name="RPrest" type="ns3:RPrest" />
           <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns3:RRecRepAD" />
@@ -422,6 +440,13 @@
             <s:simpleType>
               <s:restriction base="s:string">
                 <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CNO">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{12}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -486,9 +511,7 @@
           <s:element name="nrInscTomador">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{8}|[0-9]{14}|[a-zA-Z0-9./-]" />
-                <s:maxLength value="14" />
-                <s:minLength value="8" />
+                <s:pattern value="[0-9]{14}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -549,9 +572,7 @@
           <s:element name="cnpjAssocDesp">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{8}|[0-9]{14}" />
-                <s:maxLength value="14" />
-                <s:minLength value="8" />
+                <s:pattern value="[0-9]{14}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -969,7 +990,7 @@
         </s:simpleContent>
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02">
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00">
       <s:element name="evtTotalContrib" type="ns5:evtTotalContrib" />
       <s:complexType name="evtTotalContrib">
         <s:sequence>
@@ -977,14 +998,13 @@
           <s:element name="ideContri" type="ns5:ideContri" />
           <s:element name="ideRecRetorno" type="ns5:ideRecRetorno" />
           <s:element name="infoRecEv" type="ns5:TDadosProcessamentoEvento" />
-          <s:element name="infoTotalContrib" type="ns5:infoTotalContrib" />
+          <s:element minOccurs="0" name="infoTotalContrib" type="ns5:infoTotalContrib" />
         </s:sequence>
-        <s:attribute name="id" use="required">
+        <s:attribute name="id">
           <s:simpleType>
             <s:restriction base="s:string">
-              <s:pattern value="I{1}D{1}[0-9]{34}" />
-              <s:maxLength value="36" />
-              <s:minLength value="36" />
+              <s:maxLength value="1024" />
+              <s:minLength value="0" />
             </s:restriction>
           </s:simpleType>
         </s:attribute>
@@ -1025,7 +1045,7 @@
           <s:element name="descRetorno">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="255" />
+                <s:maxLength value="1000" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
@@ -1066,7 +1086,7 @@
           <s:element name="dscResp">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="255" />
+                <s:maxLength value="1024" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
@@ -1075,11 +1095,11 @@
       </s:complexType>
       <s:complexType name="TDadosProcessamentoEvento">
         <s:sequence>
-          <s:element name="nrProtEntr">
+          <s:element minOccurs="0" name="nrProtEntr">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="49" />
-                <s:minLength value="49" />
+                <s:maxLength value="2000" />
+                <s:minLength value="0" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -1087,7 +1107,7 @@
           <s:element minOccurs="0" name="tpEv">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="6" />
+                <s:maxLength value="1000" />
                 <s:minLength value="0" />
               </s:restriction>
             </s:simpleType>
@@ -1095,7 +1115,7 @@
           <s:element minOccurs="0" name="idEv">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="200" />
+                <s:maxLength value="1000" />
                 <s:minLength value="0" />
               </s:restriction>
             </s:simpleType>
@@ -1103,7 +1123,7 @@
           <s:element minOccurs="0" name="hash">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="60" />
+                <s:maxLength value="1000" />
                 <s:minLength value="0" />
               </s:restriction>
             </s:simpleType>
@@ -1145,6 +1165,13 @@
             <s:simpleType>
               <s:restriction base="s:string">
                 <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CNO">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{12}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -1214,9 +1241,7 @@
           <s:element name="nrInscTomador">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{8}|[0-9]{14}|[a-zA-Z0-9./-]" />
-                <s:maxLength value="14" />
-                <s:minLength value="8" />
+                <s:pattern value="[0-9]{14}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -1274,24 +1299,6 @@
       </s:complexType>
       <s:complexType name="RRecRepAD">
         <s:sequence>
-          <s:element name="cnpjAssocDesp">
-            <s:simpleType>
-              <s:restriction base="s:string">
-                <s:pattern value="[0-9]{8}|[0-9]{14}" />
-                <s:maxLength value="14" />
-                <s:minLength value="8" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
-          <s:element name="vlrTotalRep">
-            <s:simpleType>
-              <s:restriction base="s:string">
-                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
-                <s:maxLength value="17" />
-                <s:minLength value="4" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
           <s:element name="CRRecRepAD">
             <s:simpleType>
               <s:restriction base="s:string">

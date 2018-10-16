@@ -23,7 +23,7 @@ namespace SCI.Reinf.Irko {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ServiceSoap", Namespace="http://www.irko.com.br")]
@@ -194,7 +194,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -277,7 +277,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -347,7 +347,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -380,7 +380,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -441,7 +441,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -476,7 +476,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -550,7 +550,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -583,7 +583,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -670,7 +670,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -718,7 +718,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -767,7 +767,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -802,7 +802,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -902,7 +902,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -949,7 +949,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1076,7 +1076,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1111,7 +1111,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1146,7 +1146,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1232,7 +1232,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1292,7 +1292,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1327,7 +1327,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1386,7 +1386,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1457,11 +1457,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class RCPRB1 {
         
         private string cRCPRBField;
@@ -1502,11 +1502,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class RComl1 {
         
         private string cRComlField;
@@ -1547,42 +1547,18 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class RRecRepAD1 {
-        
-        private string cnpjAssocDespField;
-        
-        private string vlrTotalRepField;
         
         private string cRRecRepADField;
         
         private string vlrCRRecRepADField;
         
         private string vlrCRRecRepADSuspField;
-        
-        /// <remarks/>
-        public string cnpjAssocDesp {
-            get {
-                return this.cnpjAssocDespField;
-            }
-            set {
-                this.cnpjAssocDespField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string vlrTotalRep {
-            get {
-                return this.vlrTotalRepField;
-            }
-            set {
-                this.vlrTotalRepField = value;
-            }
-        }
         
         /// <remarks/>
         public string CRRecRepAD {
@@ -1616,11 +1592,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class RPrest1 {
         
         private byte tpInscTomadorField;
@@ -1709,11 +1685,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class infoCRTom1 {
         
         private string cRTomField;
@@ -1754,14 +1730,16 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class RTom1 {
         
         private string cnpjPrestadorField;
+        
+        private string cNOField;
         
         private string vlrTotalBaseRetField;
         
@@ -1774,6 +1752,16 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.cnpjPrestadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CNO {
+            get {
+                return this.cNOField;
+            }
+            set {
+                this.cNOField = value;
             }
         }
         
@@ -1800,11 +1788,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class infoTotalContrib {
         
         private string nrRecArqBaseField;
@@ -1898,11 +1886,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class TDadosProcessamentoEvento {
         
         private string nrProtEntrField;
@@ -1967,11 +1955,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class TRegistroOcorrencias1 {
         
         private long tpOcorrField;
@@ -2024,11 +2012,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class TStatus2 {
         
         private string cdRetornoField;
@@ -2070,11 +2058,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class ideRecRetorno1 {
         
         private TStatus2 ideStatusField;
@@ -2091,11 +2079,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class ideContri1 {
         
         private byte tpInscField;
@@ -2124,11 +2112,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class ideEvento1 {
         
         private string perApurField;
@@ -2145,11 +2133,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
     public partial class evtTotalContrib {
         
         private ideEvento1 ideEventoField;
@@ -2227,11 +2215,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RRecEspetDesp {
         
         private string cRRecEspetDespField;
@@ -2284,11 +2272,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RCPRB {
         
         private string cRCPRBField;
@@ -2329,11 +2317,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RComl {
         
         private string cRComlField;
@@ -2374,11 +2362,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RRecRepAD {
         
         private string cnpjAssocDespField;
@@ -2443,11 +2431,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RPrest {
         
         private byte tpInscTomadorField;
@@ -2536,11 +2524,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class infoCRTom {
         
         private string cRTomField;
@@ -2581,14 +2569,16 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class RTom {
         
         private string cnpjPrestadorField;
+        
+        private string cNOField;
         
         private string vlrTotalBaseRetField;
         
@@ -2601,6 +2591,16 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.cnpjPrestadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CNO {
+            get {
+                return this.cNOField;
+            }
+            set {
+                this.cNOField = value;
             }
         }
         
@@ -2627,14 +2627,16 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
-    public partial class infoTotal {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class ideEstab {
         
-        private string nrRecArqBaseField;
+        private byte tpInscField;
+        
+        private string nrInscField;
         
         private RTom rTomField;
         
@@ -2649,12 +2651,22 @@ namespace SCI.Reinf.Irko {
         private RRecEspetDesp rRecEspetDespField;
         
         /// <remarks/>
-        public string nrRecArqBase {
+        public byte tpInsc {
             get {
-                return this.nrRecArqBaseField;
+                return this.tpInscField;
             }
             set {
-                this.nrRecArqBaseField = value;
+                this.tpInscField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInsc {
+            get {
+                return this.nrInscField;
+            }
+            set {
+                this.nrInscField = value;
             }
         }
         
@@ -2723,11 +2735,44 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class infoTotal {
+        
+        private string nrRecArqBaseField;
+        
+        private ideEstab ideEstabField;
+        
+        /// <remarks/>
+        public string nrRecArqBase {
+            get {
+                return this.nrRecArqBaseField;
+            }
+            set {
+                this.nrRecArqBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ideEstab ideEstab {
+            get {
+                return this.ideEstabField;
+            }
+            set {
+                this.ideEstabField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class infoRecEv {
         
         private string nrProtEntrField;
@@ -2792,11 +2837,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class TRegistroOcorrencias {
         
         private long tpOcorrField;
@@ -2849,11 +2894,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class TStatus1 {
         
         private string cdRetornoField;
@@ -2895,11 +2940,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class ideRecRetorno {
         
         private TStatus1 ideStatusField;
@@ -2916,11 +2961,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class ideContri {
         
         private byte tpInscField;
@@ -2949,11 +2994,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class ideEvento {
         
         private string perApurField;
@@ -2970,11 +3015,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class evtTotal {
         
         private ideEvento ideEventoField;
@@ -3052,11 +3097,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
     public partial class Reinf1 {
         
         private evtTotal evtTotalField;
@@ -3076,7 +3121,7 @@ namespace SCI.Reinf.Irko {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
         public evtTotalContrib evtTotalContrib {
             get {
                 return this.evtTotalContribField;
@@ -3099,11 +3144,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class TArquivoReinf {
         
         private Reinf1 reinfField;
@@ -3111,7 +3156,7 @@ namespace SCI.Reinf.Irko {
         private string idField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
         public Reinf1 Reinf {
             get {
                 return this.reinfField;
@@ -3134,11 +3179,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class ocorrencias {
         
         private long tipoField;
@@ -3191,11 +3236,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class TStatus {
         
         private string cdStatusField;
@@ -3236,11 +3281,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class TIdeTransmissor {
         
         private string idTransmissorField;
@@ -3257,11 +3302,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class retornoLoteEventos {
         
         private TIdeTransmissor ideTransmissorField;
@@ -3316,11 +3361,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
     public partial class Reinf {
         
         private retornoLoteEventos retornoLoteEventosField;
@@ -3353,7 +3398,7 @@ namespace SCI.Reinf.Irko {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoRecuperaCNPJCPFCertificado))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoEventopPendente))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoGravarRetornoEvento))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3423,7 +3468,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3444,7 +3489,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3465,7 +3510,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3498,7 +3543,7 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -3581,11 +3626,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void GravarRetornoEventoCompletedEventHandler(object sender, GravarRetornoEventoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GravarRetornoEventoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3607,11 +3652,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void ListarEventoPendenteCompletedEventHandler(object sender, ListarEventoPendenteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarEventoPendenteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -3633,11 +3678,11 @@ namespace SCI.Reinf.Irko {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void RecuperaCNPJCPFCertificadoCompletedEventHandler(object sender, RecuperaCNPJCPFCertificadoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RecuperaCNPJCPFCertificadoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
