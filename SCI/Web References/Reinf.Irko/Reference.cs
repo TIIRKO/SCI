@@ -213,6 +213,8 @@ namespace SCI.Reinf.Irko {
         
         private string arquivoXMLField;
         
+        private string versaoField;
+        
         /// <remarks/>
         public Empresa Empresa {
             get {
@@ -272,6 +274,16 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.arquivoXMLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Versao {
+            get {
+                return this.versaoField;
+            }
+            set {
+                this.versaoField = value;
             }
         }
     }
@@ -384,16 +396,1759 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class ObjectType {
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class RCPRB3 {
+        
+        private string cRCPRBField;
+        
+        private string vlrCRCPRBField;
+        
+        private string vlrCRCPRBSuspField;
+        
+        /// <remarks/>
+        public string CRCPRB {
+            get {
+                return this.cRCPRBField;
+            }
+            set {
+                this.cRCPRBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRCPRB {
+            get {
+                return this.vlrCRCPRBField;
+            }
+            set {
+                this.vlrCRCPRBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRCPRBSusp {
+            get {
+                return this.vlrCRCPRBSuspField;
+            }
+            set {
+                this.vlrCRCPRBSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class RComl3 {
+        
+        private string cRComlField;
+        
+        private string vlrCRComlField;
+        
+        private string vlrCRComlSuspField;
+        
+        /// <remarks/>
+        public string CRComl {
+            get {
+                return this.cRComlField;
+            }
+            set {
+                this.cRComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRComl {
+            get {
+                return this.vlrCRComlField;
+            }
+            set {
+                this.vlrCRComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRComlSusp {
+            get {
+                return this.vlrCRComlSuspField;
+            }
+            set {
+                this.vlrCRComlSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class RRecRepAD3 {
+        
+        private string cRRecRepADField;
+        
+        private string vlrCRRecRepADField;
+        
+        private string vlrCRRecRepADSuspField;
+        
+        /// <remarks/>
+        public string CRRecRepAD {
+            get {
+                return this.cRRecRepADField;
+            }
+            set {
+                this.cRRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecRepAD {
+            get {
+                return this.vlrCRRecRepADField;
+            }
+            set {
+                this.vlrCRRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecRepADSusp {
+            get {
+                return this.vlrCRRecRepADSuspField;
+            }
+            set {
+                this.vlrCRRecRepADSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class RPrest3 {
+        
+        private byte tpInscTomadorField;
+        
+        private string nrInscTomadorField;
+        
+        private string vlrTotalBaseRetField;
+        
+        private string vlrTotalRetPrincField;
+        
+        private string vlrTotalRetAdicField;
+        
+        private string vlrTotalNRetPrincField;
+        
+        private string vlrTotalNRetAdicField;
+        
+        /// <remarks/>
+        public byte tpInscTomador {
+            get {
+                return this.tpInscTomadorField;
+            }
+            set {
+                this.tpInscTomadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInscTomador {
+            get {
+                return this.nrInscTomadorField;
+            }
+            set {
+                this.nrInscTomadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalBaseRet {
+            get {
+                return this.vlrTotalBaseRetField;
+            }
+            set {
+                this.vlrTotalBaseRetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRetPrinc {
+            get {
+                return this.vlrTotalRetPrincField;
+            }
+            set {
+                this.vlrTotalRetPrincField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRetAdic {
+            get {
+                return this.vlrTotalRetAdicField;
+            }
+            set {
+                this.vlrTotalRetAdicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalNRetPrinc {
+            get {
+                return this.vlrTotalNRetPrincField;
+            }
+            set {
+                this.vlrTotalNRetPrincField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalNRetAdic {
+            get {
+                return this.vlrTotalNRetAdicField;
+            }
+            set {
+                this.vlrTotalNRetAdicField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class infoCRTom3 {
+        
+        private string cRTomField;
+        
+        private string vlrCRTomField;
+        
+        private string vlrCRTomSuspField;
+        
+        /// <remarks/>
+        public string CRTom {
+            get {
+                return this.cRTomField;
+            }
+            set {
+                this.cRTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string VlrCRTom {
+            get {
+                return this.vlrCRTomField;
+            }
+            set {
+                this.vlrCRTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string VlrCRTomSusp {
+            get {
+                return this.vlrCRTomSuspField;
+            }
+            set {
+                this.vlrCRTomSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class RTom3 {
+        
+        private string cnpjPrestadorField;
+        
+        private string cNOField;
+        
+        private string vlrTotalBaseRetField;
+        
+        private infoCRTom3[] infoCRTomField;
+        
+        /// <remarks/>
+        public string cnpjPrestador {
+            get {
+                return this.cnpjPrestadorField;
+            }
+            set {
+                this.cnpjPrestadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CNO {
+            get {
+                return this.cNOField;
+            }
+            set {
+                this.cNOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalBaseRet {
+            get {
+                return this.vlrTotalBaseRetField;
+            }
+            set {
+                this.vlrTotalBaseRetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("infoCRTom", IsNullable=true)]
+        public infoCRTom3[] infoCRTom {
+            get {
+                return this.infoCRTomField;
+            }
+            set {
+                this.infoCRTomField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoTotalContrib", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class infoTotalContrib1 {
+        
+        private string nrRecArqBaseField;
+        
+        private uint indExistInfoField;
+        
+        private RTom3[] rTomField;
+        
+        private RPrest3[] rPrestField;
+        
+        private RRecRepAD3[] rRecRepADField;
+        
+        private RComl3[] rComlField;
+        
+        private RCPRB3[] rCPRBField;
+        
+        /// <remarks/>
+        public string nrRecArqBase {
+            get {
+                return this.nrRecArqBaseField;
+            }
+            set {
+                this.nrRecArqBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public uint indExistInfo {
+            get {
+                return this.indExistInfoField;
+            }
+            set {
+                this.indExistInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RTom", IsNullable=true)]
+        public RTom3[] RTom {
+            get {
+                return this.rTomField;
+            }
+            set {
+                this.rTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RPrest", IsNullable=true)]
+        public RPrest3[] RPrest {
+            get {
+                return this.rPrestField;
+            }
+            set {
+                this.rPrestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RRecRepAD", IsNullable=true)]
+        public RRecRepAD3[] RRecRepAD {
+            get {
+                return this.rRecRepADField;
+            }
+            set {
+                this.rRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RComl", IsNullable=true)]
+        public RComl3[] RComl {
+            get {
+                return this.rComlField;
+            }
+            set {
+                this.rComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RCPRB", IsNullable=true)]
+        public RCPRB3[] RCPRB {
+            get {
+                return this.rCPRBField;
+            }
+            set {
+                this.rCPRBField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TDadosProcessamentoEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class TDadosProcessamentoEvento1 {
+        
+        private string nrProtEntrField;
+        
+        private System.DateTime dhProcessField;
+        
+        private string tpEvField;
+        
+        private string idEvField;
+        
+        private string hashField;
+        
+        /// <remarks/>
+        public string nrProtEntr {
+            get {
+                return this.nrProtEntrField;
+            }
+            set {
+                this.nrProtEntrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime dhProcess {
+            get {
+                return this.dhProcessField;
+            }
+            set {
+                this.dhProcessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string tpEv {
+            get {
+                return this.tpEvField;
+            }
+            set {
+                this.tpEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string idEv {
+            get {
+                return this.idEvField;
+            }
+            set {
+                this.idEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string hash {
+            get {
+                return this.hashField;
+            }
+            set {
+                this.hashField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class TRegistroOcorrencias3 {
+        
+        private long tpOcorrField;
+        
+        private string localErroAvisoField;
+        
+        private string codRespField;
+        
+        private string dscRespField;
+        
+        /// <remarks/>
+        public long tpOcorr {
+            get {
+                return this.tpOcorrField;
+            }
+            set {
+                this.tpOcorrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string localErroAviso {
+            get {
+                return this.localErroAvisoField;
+            }
+            set {
+                this.localErroAvisoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string codResp {
+            get {
+                return this.codRespField;
+            }
+            set {
+                this.codRespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dscResp {
+            get {
+                return this.dscRespField;
+            }
+            set {
+                this.dscRespField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class TStatus5 {
+        
+        private string cdRetornoField;
+        
+        private string descRetornoField;
+        
+        private TRegistroOcorrencias3[] regOcorrsField;
+        
+        /// <remarks/>
+        public string cdRetorno {
+            get {
+                return this.cdRetornoField;
+            }
+            set {
+                this.cdRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string descRetorno {
+            get {
+                return this.descRetornoField;
+            }
+            set {
+                this.descRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("regOcorrs", IsNullable=true)]
+        public TRegistroOcorrencias3[] regOcorrs {
+            get {
+                return this.regOcorrsField;
+            }
+            set {
+                this.regOcorrsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class ideRecRetorno3 {
+        
+        private TStatus5 ideStatusField;
+        
+        /// <remarks/>
+        public TStatus5 ideStatus {
+            get {
+                return this.ideStatusField;
+            }
+            set {
+                this.ideStatusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class ideContri3 {
+        
+        private byte tpInscField;
+        
+        private string nrInscField;
+        
+        /// <remarks/>
+        public byte tpInsc {
+            get {
+                return this.tpInscField;
+            }
+            set {
+                this.tpInscField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInsc {
+            get {
+                return this.nrInscField;
+            }
+            set {
+                this.nrInscField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class ideEvento3 {
+        
+        private string perApurField;
+        
+        /// <remarks/>
+        public string perApur {
+            get {
+                return this.perApurField;
+            }
+            set {
+                this.perApurField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="evtTotalContrib", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    public partial class evtTotalContrib1 {
+        
+        private ideEvento3 ideEventoField;
+        
+        private ideContri3 ideContriField;
+        
+        private ideRecRetorno3 ideRecRetornoField;
+        
+        private TDadosProcessamentoEvento1 infoRecEvField;
+        
+        private infoTotalContrib1 infoTotalContribField;
         
         private string idField;
         
-        private string mimeTypeField;
+        /// <remarks/>
+        public ideEvento3 ideEvento {
+            get {
+                return this.ideEventoField;
+            }
+            set {
+                this.ideEventoField = value;
+            }
+        }
         
-        private string encodingField;
+        /// <remarks/>
+        public ideContri3 ideContri {
+            get {
+                return this.ideContriField;
+            }
+            set {
+                this.ideContriField = value;
+            }
+        }
         
-        private string valueField;
+        /// <remarks/>
+        public ideRecRetorno3 ideRecRetorno {
+            get {
+                return this.ideRecRetornoField;
+            }
+            set {
+                this.ideRecRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public TDadosProcessamentoEvento1 infoRecEv {
+            get {
+                return this.infoRecEvField;
+            }
+            set {
+                this.infoRecEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public infoTotalContrib1 infoTotalContrib {
+            get {
+                return this.infoTotalContribField;
+            }
+            set {
+                this.infoTotalContribField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecEspetDesp", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RRecEspetDesp1 {
+        
+        private string cRRecEspetDespField;
+        
+        private string vlrReceitaTotalField;
+        
+        private string vlrCRRecEspetDespField;
+        
+        private string vlrCRRecEspetDespSuspField;
+        
+        /// <remarks/>
+        public string CRRecEspetDesp {
+            get {
+                return this.cRRecEspetDespField;
+            }
+            set {
+                this.cRRecEspetDespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrReceitaTotal {
+            get {
+                return this.vlrReceitaTotalField;
+            }
+            set {
+                this.vlrReceitaTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecEspetDesp {
+            get {
+                return this.vlrCRRecEspetDespField;
+            }
+            set {
+                this.vlrCRRecEspetDespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecEspetDespSusp {
+            get {
+                return this.vlrCRRecEspetDespSuspField;
+            }
+            set {
+                this.vlrCRRecEspetDespSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RCPRB2 {
+        
+        private string cRCPRBField;
+        
+        private string vlrCRCPRBField;
+        
+        private string vlrCRCPRBSuspField;
+        
+        /// <remarks/>
+        public string CRCPRB {
+            get {
+                return this.cRCPRBField;
+            }
+            set {
+                this.cRCPRBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRCPRB {
+            get {
+                return this.vlrCRCPRBField;
+            }
+            set {
+                this.vlrCRCPRBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRCPRBSusp {
+            get {
+                return this.vlrCRCPRBSuspField;
+            }
+            set {
+                this.vlrCRCPRBSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RComl2 {
+        
+        private string cRComlField;
+        
+        private string vlrCRComlField;
+        
+        private string vlrCRComlSuspField;
+        
+        /// <remarks/>
+        public string CRComl {
+            get {
+                return this.cRComlField;
+            }
+            set {
+                this.cRComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRComl {
+            get {
+                return this.vlrCRComlField;
+            }
+            set {
+                this.vlrCRComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRComlSusp {
+            get {
+                return this.vlrCRComlSuspField;
+            }
+            set {
+                this.vlrCRComlSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RRecRepAD2 {
+        
+        private string cnpjAssocDespField;
+        
+        private string vlrTotalRepField;
+        
+        private string cRRecRepADField;
+        
+        private string vlrCRRecRepADField;
+        
+        private string vlrCRRecRepADSuspField;
+        
+        /// <remarks/>
+        public string cnpjAssocDesp {
+            get {
+                return this.cnpjAssocDespField;
+            }
+            set {
+                this.cnpjAssocDespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRep {
+            get {
+                return this.vlrTotalRepField;
+            }
+            set {
+                this.vlrTotalRepField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CRRecRepAD {
+            get {
+                return this.cRRecRepADField;
+            }
+            set {
+                this.cRRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecRepAD {
+            get {
+                return this.vlrCRRecRepADField;
+            }
+            set {
+                this.vlrCRRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrCRRecRepADSusp {
+            get {
+                return this.vlrCRRecRepADSuspField;
+            }
+            set {
+                this.vlrCRRecRepADSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RPrest2 {
+        
+        private byte tpInscTomadorField;
+        
+        private string nrInscTomadorField;
+        
+        private string vlrTotalBaseRetField;
+        
+        private string vlrTotalRetPrincField;
+        
+        private string vlrTotalRetAdicField;
+        
+        private string vlrTotalNRetPrincField;
+        
+        private string vlrTotalNRetAdicField;
+        
+        /// <remarks/>
+        public byte tpInscTomador {
+            get {
+                return this.tpInscTomadorField;
+            }
+            set {
+                this.tpInscTomadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInscTomador {
+            get {
+                return this.nrInscTomadorField;
+            }
+            set {
+                this.nrInscTomadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalBaseRet {
+            get {
+                return this.vlrTotalBaseRetField;
+            }
+            set {
+                this.vlrTotalBaseRetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRetPrinc {
+            get {
+                return this.vlrTotalRetPrincField;
+            }
+            set {
+                this.vlrTotalRetPrincField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRetAdic {
+            get {
+                return this.vlrTotalRetAdicField;
+            }
+            set {
+                this.vlrTotalRetAdicField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalNRetPrinc {
+            get {
+                return this.vlrTotalNRetPrincField;
+            }
+            set {
+                this.vlrTotalNRetPrincField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalNRetAdic {
+            get {
+                return this.vlrTotalNRetAdicField;
+            }
+            set {
+                this.vlrTotalNRetAdicField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class infoCRTom2 {
+        
+        private string cRTomField;
+        
+        private string vlrCRTomField;
+        
+        private string vlrCRTomSuspField;
+        
+        /// <remarks/>
+        public string CRTom {
+            get {
+                return this.cRTomField;
+            }
+            set {
+                this.cRTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string VlrCRTom {
+            get {
+                return this.vlrCRTomField;
+            }
+            set {
+                this.vlrCRTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string VlrCRTomSusp {
+            get {
+                return this.vlrCRTomSuspField;
+            }
+            set {
+                this.vlrCRTomSuspField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class RTom2 {
+        
+        private string cnpjPrestadorField;
+        
+        private string cNOField;
+        
+        private string vlrTotalBaseRetField;
+        
+        private infoCRTom2[] infoCRTomField;
+        
+        /// <remarks/>
+        public string cnpjPrestador {
+            get {
+                return this.cnpjPrestadorField;
+            }
+            set {
+                this.cnpjPrestadorField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string CNO {
+            get {
+                return this.cNOField;
+            }
+            set {
+                this.cNOField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalBaseRet {
+            get {
+                return this.vlrTotalBaseRetField;
+            }
+            set {
+                this.vlrTotalBaseRetField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("infoCRTom", IsNullable=true)]
+        public infoCRTom2[] infoCRTom {
+            get {
+                return this.infoCRTomField;
+            }
+            set {
+                this.infoCRTomField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class ideEstab {
+        
+        private byte tpInscField;
+        
+        private bool tpInscFieldSpecified;
+        
+        private string nrInscField;
+        
+        private RTom2 rTomField;
+        
+        private RPrest2 rPrestField;
+        
+        private RRecRepAD2[] rRecRepADField;
+        
+        private RComl2[] rComlField;
+        
+        private RCPRB2[] rCPRBField;
+        
+        private RRecEspetDesp1 rRecEspetDespField;
+        
+        /// <remarks/>
+        public byte tpInsc {
+            get {
+                return this.tpInscField;
+            }
+            set {
+                this.tpInscField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool tpInscSpecified {
+            get {
+                return this.tpInscFieldSpecified;
+            }
+            set {
+                this.tpInscFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInsc {
+            get {
+                return this.nrInscField;
+            }
+            set {
+                this.nrInscField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RTom2 RTom {
+            get {
+                return this.rTomField;
+            }
+            set {
+                this.rTomField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RPrest2 RPrest {
+            get {
+                return this.rPrestField;
+            }
+            set {
+                this.rPrestField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RRecRepAD", IsNullable=true)]
+        public RRecRepAD2[] RRecRepAD {
+            get {
+                return this.rRecRepADField;
+            }
+            set {
+                this.rRecRepADField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RComl", IsNullable=true)]
+        public RComl2[] RComl {
+            get {
+                return this.rComlField;
+            }
+            set {
+                this.rComlField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("RCPRB", IsNullable=true)]
+        public RCPRB2[] RCPRB {
+            get {
+                return this.rCPRBField;
+            }
+            set {
+                this.rCPRBField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public RRecEspetDesp1 RRecEspetDesp {
+            get {
+                return this.rRecEspetDespField;
+            }
+            set {
+                this.rRecEspetDespField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoTotal", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class infoTotal1 {
+        
+        private string nrRecArqBaseField;
+        
+        private ideEstab ideEstabField;
+        
+        /// <remarks/>
+        public string nrRecArqBase {
+            get {
+                return this.nrRecArqBaseField;
+            }
+            set {
+                this.nrRecArqBaseField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ideEstab ideEstab {
+            get {
+                return this.ideEstabField;
+            }
+            set {
+                this.ideEstabField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoRecEv", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class infoRecEv1 {
+        
+        private string nrProtEntrField;
+        
+        private System.DateTime dhProcessField;
+        
+        private string tpEvField;
+        
+        private string idEvField;
+        
+        private string hashField;
+        
+        /// <remarks/>
+        public string nrProtEntr {
+            get {
+                return this.nrProtEntrField;
+            }
+            set {
+                this.nrProtEntrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public System.DateTime dhProcess {
+            get {
+                return this.dhProcessField;
+            }
+            set {
+                this.dhProcessField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string tpEv {
+            get {
+                return this.tpEvField;
+            }
+            set {
+                this.tpEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string idEv {
+            get {
+                return this.idEvField;
+            }
+            set {
+                this.idEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string hash {
+            get {
+                return this.hashField;
+            }
+            set {
+                this.hashField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class TRegistroOcorrencias2 {
+        
+        private long tpOcorrField;
+        
+        private string localErroAvisoField;
+        
+        private string codRespField;
+        
+        private string dscRespField;
+        
+        /// <remarks/>
+        public long tpOcorr {
+            get {
+                return this.tpOcorrField;
+            }
+            set {
+                this.tpOcorrField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string localErroAviso {
+            get {
+                return this.localErroAvisoField;
+            }
+            set {
+                this.localErroAvisoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string codResp {
+            get {
+                return this.codRespField;
+            }
+            set {
+                this.codRespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string dscResp {
+            get {
+                return this.dscRespField;
+            }
+            set {
+                this.dscRespField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class TStatus4 {
+        
+        private string cdRetornoField;
+        
+        private string descRetornoField;
+        
+        private TRegistroOcorrencias2[] regOcorrsField;
+        
+        /// <remarks/>
+        public string cdRetorno {
+            get {
+                return this.cdRetornoField;
+            }
+            set {
+                this.cdRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string descRetorno {
+            get {
+                return this.descRetornoField;
+            }
+            set {
+                this.descRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("regOcorrs", IsNullable=true)]
+        public TRegistroOcorrencias2[] regOcorrs {
+            get {
+                return this.regOcorrsField;
+            }
+            set {
+                this.regOcorrsField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class ideRecRetorno2 {
+        
+        private TStatus4 ideStatusField;
+        
+        /// <remarks/>
+        public TStatus4 ideStatus {
+            get {
+                return this.ideStatusField;
+            }
+            set {
+                this.ideStatusField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class ideContri2 {
+        
+        private byte tpInscField;
+        
+        private string nrInscField;
+        
+        /// <remarks/>
+        public byte tpInsc {
+            get {
+                return this.tpInscField;
+            }
+            set {
+                this.tpInscField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string nrInsc {
+            get {
+                return this.nrInscField;
+            }
+            set {
+                this.nrInscField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class ideEvento2 {
+        
+        private string perApurField;
+        
+        /// <remarks/>
+        public string perApur {
+            get {
+                return this.perApurField;
+            }
+            set {
+                this.perApurField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="evtTotal", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class evtTotal1 {
+        
+        private ideEvento2 ideEventoField;
+        
+        private ideContri2 ideContriField;
+        
+        private ideRecRetorno2 ideRecRetornoField;
+        
+        private infoRecEv1 infoRecEvField;
+        
+        private infoTotal1 infoTotalField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        public ideEvento2 ideEvento {
+            get {
+                return this.ideEventoField;
+            }
+            set {
+                this.ideEventoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ideContri2 ideContri {
+            get {
+                return this.ideContriField;
+            }
+            set {
+                this.ideContriField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ideRecRetorno2 ideRecRetorno {
+            get {
+                return this.ideRecRetornoField;
+            }
+            set {
+                this.ideRecRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public infoRecEv1 infoRecEv {
+            get {
+                return this.infoRecEvField;
+            }
+            set {
+                this.infoRecEvField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public infoTotal1 infoTotal {
+            get {
+                return this.infoTotalField;
+            }
+            set {
+                this.infoTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    public partial class Reinf3 {
+        
+        private evtTotal1 evtTotalField;
+        
+        private evtTotalContrib1 evtTotalContribField;
+        
+        private SignatureType signatureField;
+        
+        /// <remarks/>
+        public evtTotal1 evtTotal {
+            get {
+                return this.evtTotalField;
+            }
+            set {
+                this.evtTotalField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+        public evtTotalContrib1 evtTotalContrib {
+            get {
+                return this.evtTotalContribField;
+            }
+            set {
+                this.evtTotalContribField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+        public SignatureType Signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                this.signatureField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class SignatureType {
+        
+        private SignedInfoType signedInfoField;
+        
+        private SignatureValueType signatureValueField;
+        
+        private KeyInfoType keyInfoField;
+        
+        private ObjectType[] objectField;
+        
+        private string idField;
+        
+        /// <remarks/>
+        public SignedInfoType SignedInfo {
+            get {
+                return this.signedInfoField;
+            }
+            set {
+                this.signedInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public SignatureValueType SignatureValue {
+            get {
+                return this.signatureValueField;
+            }
+            set {
+                this.signatureValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public KeyInfoType KeyInfo {
+            get {
+                return this.keyInfoField;
+            }
+            set {
+                this.keyInfoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Object", IsNullable=true)]
+        public ObjectType[] Object {
+            get {
+                return this.objectField;
+            }
+            set {
+                this.objectField = value;
+            }
+        }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
@@ -405,26 +2160,87 @@ namespace SCI.Reinf.Irko {
                 this.idField = value;
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class SignedInfoType {
+        
+        private CanonicalizationMethodType canonicalizationMethodField;
+        
+        private SignatureMethodType signatureMethodField;
+        
+        private ReferenceType[] referenceField;
+        
+        private string idField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string MimeType {
+        public CanonicalizationMethodType CanonicalizationMethod {
             get {
-                return this.mimeTypeField;
+                return this.canonicalizationMethodField;
             }
             set {
-                this.mimeTypeField = value;
+                this.canonicalizationMethodField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string Encoding {
+        public SignatureMethodType SignatureMethod {
             get {
-                return this.encodingField;
+                return this.signatureMethodField;
             }
             set {
-                this.encodingField = value;
+                this.signatureMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("Reference", IsNullable=true)]
+        public ReferenceType[] Reference {
+            get {
+                return this.referenceField;
+            }
+            set {
+                this.referenceField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class CanonicalizationMethodType {
+        
+        private string algorithmField;
+        
+        private string valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string Algorithm {
+            get {
+                return this.algorithmField;
+            }
+            set {
+                this.algorithmField = value;
             }
         }
         
@@ -446,105 +2262,56 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class SPKIDataType {
+    public partial class SignatureMethodType {
         
-        private byte[][] sPKISexpField;
+        private long hMACOutputLengthField;
         
-        private System.Xml.XmlElement[] anyField;
+        private bool hMACOutputLengthFieldSpecified;
+        
+        private string[] textField;
+        
+        private string algorithmField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType="base64Binary")]
-        public byte[][] SPKISexp {
+        public long HMACOutputLength {
             get {
-                return this.sPKISexpField;
+                return this.hMACOutputLengthField;
             }
             set {
-                this.sPKISexpField = value;
+                this.hMACOutputLengthField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute()]
-        public System.Xml.XmlElement[] Any {
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool HMACOutputLengthSpecified {
             get {
-                return this.anyField;
+                return this.hMACOutputLengthFieldSpecified;
             }
             set {
-                this.anyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class PGPDataType {
-        
-        private byte[] pGPKeyIDField;
-        
-        private byte[] pGPKeyPacketField;
-        
-        private System.Xml.XmlElement[] anyField;
-        
-        private byte[] pGPKeyPacket1Field;
-        
-        private System.Xml.XmlElement[] any1Field;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=0)]
-        public byte[] PGPKeyID {
-            get {
-                return this.pGPKeyIDField;
-            }
-            set {
-                this.pGPKeyIDField = value;
+                this.hMACOutputLengthFieldSpecified = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=1)]
-        public byte[] PGPKeyPacket {
+        [System.Xml.Serialization.XmlTextAttribute()]
+        public string[] Text {
             get {
-                return this.pGPKeyPacketField;
+                return this.textField;
             }
             set {
-                this.pGPKeyPacketField = value;
+                this.textField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute(Order=2)]
-        public System.Xml.XmlElement[] Any {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string Algorithm {
             get {
-                return this.anyField;
+                return this.algorithmField;
             }
             set {
-                this.anyField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("PGPKeyPacket", DataType="base64Binary", Order=3)]
-        public byte[] PGPKeyPacket1 {
-            get {
-                return this.pGPKeyPacket1Field;
-            }
-            set {
-                this.pGPKeyPacket1Field = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute(Order=4)]
-        public System.Xml.XmlElement[] Any1 {
-            get {
-                return this.any1Field;
-            }
-            set {
-                this.any1Field = value;
+                this.algorithmField = value;
             }
         }
     }
@@ -555,129 +2322,15 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class X509IssuerSerialType {
-        
-        private string x509IssuerNameField;
-        
-        private long x509SerialNumberField;
-        
-        /// <remarks/>
-        public string X509IssuerName {
-            get {
-                return this.x509IssuerNameField;
-            }
-            set {
-                this.x509IssuerNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public long X509SerialNumber {
-            get {
-                return this.x509SerialNumberField;
-            }
-            set {
-                this.x509SerialNumberField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class X509DataType {
-        
-        private X509IssuerSerialType[] x509IssuerSerialField;
-        
-        private byte[][] x509SKIField;
-        
-        private string[] x509SubjectNameField;
-        
-        private byte[][] x509CertificateField;
-        
-        private byte[][] x509CRLField;
-        
-        private System.Xml.XmlElement[] anyField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("X509IssuerSerial", IsNullable=true)]
-        public X509IssuerSerialType[] X509IssuerSerial {
-            get {
-                return this.x509IssuerSerialField;
-            }
-            set {
-                this.x509IssuerSerialField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("X509SKI", DataType="base64Binary", IsNullable=true)]
-        public byte[][] X509SKI {
-            get {
-                return this.x509SKIField;
-            }
-            set {
-                this.x509SKIField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("X509SubjectName", IsNullable=true)]
-        public string[] X509SubjectName {
-            get {
-                return this.x509SubjectNameField;
-            }
-            set {
-                this.x509SubjectNameField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("X509Certificate", DataType="base64Binary", IsNullable=true)]
-        public byte[][] X509Certificate {
-            get {
-                return this.x509CertificateField;
-            }
-            set {
-                this.x509CertificateField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("X509CRL", DataType="base64Binary", IsNullable=true)]
-        public byte[][] X509CRL {
-            get {
-                return this.x509CRLField;
-            }
-            set {
-                this.x509CRLField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAnyElementAttribute()]
-        public System.Xml.XmlElement[] Any {
-            get {
-                return this.anyField;
-            }
-            set {
-                this.anyField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class RetrievalMethodType {
+    public partial class ReferenceType {
         
         private TransformType[] transformsField;
+        
+        private DigestMethodType digestMethodField;
+        
+        private byte[] digestValueField;
+        
+        private string idField;
         
         private string uRIField;
         
@@ -691,6 +2344,38 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.transformsField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public DigestMethodType DigestMethod {
+            get {
+                return this.digestMethodField;
+            }
+            set {
+                this.digestMethodField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] DigestValue {
+            get {
+                return this.digestValueField;
+            }
+            set {
+                this.digestValueField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
             }
         }
         
@@ -772,178 +2457,66 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class RSAKeyValueType {
+    public partial class DigestMethodType {
         
-        private byte[] modulusField;
+        private string algorithmField;
         
-        private byte[] exponentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Modulus {
-            get {
-                return this.modulusField;
-            }
-            set {
-                this.modulusField = value;
-            }
-        }
+        private string valueField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Exponent {
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string Algorithm {
             get {
-                return this.exponentField;
+                return this.algorithmField;
             }
             set {
-                this.exponentField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class DSAKeyValueType {
-        
-        private byte[] pField;
-        
-        private byte[] qField;
-        
-        private byte[] gField;
-        
-        private byte[] yField;
-        
-        private byte[] jField;
-        
-        private byte[] seedField;
-        
-        private byte[] pgenCounterField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] P {
-            get {
-                return this.pField;
-            }
-            set {
-                this.pField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Q {
-            get {
-                return this.qField;
-            }
-            set {
-                this.qField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] G {
-            get {
-                return this.gField;
-            }
-            set {
-                this.gField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Y {
-            get {
-                return this.yField;
-            }
-            set {
-                this.yField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] J {
-            get {
-                return this.jField;
-            }
-            set {
-                this.jField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] Seed {
-            get {
-                return this.seedField;
-            }
-            set {
-                this.seedField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] PgenCounter {
-            get {
-                return this.pgenCounterField;
-            }
-            set {
-                this.pgenCounterField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class KeyValueType {
-        
-        private DSAKeyValueType dSAKeyValueField;
-        
-        private RSAKeyValueType rSAKeyValueField;
-        
-        private System.Xml.XmlNode[] anyField;
-        
-        /// <remarks/>
-        public DSAKeyValueType DSAKeyValue {
-            get {
-                return this.dSAKeyValueField;
-            }
-            set {
-                this.dSAKeyValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public RSAKeyValueType RSAKeyValue {
-            get {
-                return this.rSAKeyValueField;
-            }
-            set {
-                this.rSAKeyValueField = value;
+                this.algorithmField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        [System.Xml.Serialization.XmlAnyElementAttribute()]
-        public System.Xml.XmlNode[] Any {
+        public string Value {
             get {
-                return this.anyField;
+                return this.valueField;
             }
             set {
-                this.anyField = value;
+                this.valueField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class SignatureValueType {
+        
+        private string idField;
+        
+        private byte[] valueField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Id {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlTextAttribute(DataType="base64Binary")]
+        public byte[] Value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
             }
         }
     }
@@ -1081,66 +2654,43 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class SignatureValueType {
+    public partial class KeyValueType {
         
-        private string idField;
+        private DSAKeyValueType dSAKeyValueField;
         
-        private byte[] valueField;
+        private RSAKeyValueType rSAKeyValueField;
+        
+        private System.Xml.XmlNode[] anyField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string Id {
+        public DSAKeyValueType DSAKeyValue {
             get {
-                return this.idField;
+                return this.dSAKeyValueField;
             }
             set {
-                this.idField = value;
+                this.dSAKeyValueField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute(DataType="base64Binary")]
-        public byte[] Value {
+        public RSAKeyValueType RSAKeyValue {
             get {
-                return this.valueField;
+                return this.rSAKeyValueField;
             }
             set {
-                this.valueField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class DigestMethodType {
-        
-        private string algorithmField;
-        
-        private string valueField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string Algorithm {
-            get {
-                return this.algorithmField;
-            }
-            set {
-                this.algorithmField = value;
+                this.rSAKeyValueField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlTextAttribute()]
-        public string Value {
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlNode[] Any {
             get {
-                return this.valueField;
+                return this.anyField;
             }
             set {
-                this.valueField = value;
+                this.anyField = value;
             }
         }
     }
@@ -1151,15 +2701,144 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class ReferenceType {
+    public partial class DSAKeyValueType {
+        
+        private byte[] pField;
+        
+        private byte[] qField;
+        
+        private byte[] gField;
+        
+        private byte[] yField;
+        
+        private byte[] jField;
+        
+        private byte[] seedField;
+        
+        private byte[] pgenCounterField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] P {
+            get {
+                return this.pField;
+            }
+            set {
+                this.pField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Q {
+            get {
+                return this.qField;
+            }
+            set {
+                this.qField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] G {
+            get {
+                return this.gField;
+            }
+            set {
+                this.gField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Y {
+            get {
+                return this.yField;
+            }
+            set {
+                this.yField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] J {
+            get {
+                return this.jField;
+            }
+            set {
+                this.jField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Seed {
+            get {
+                return this.seedField;
+            }
+            set {
+                this.seedField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] PgenCounter {
+            get {
+                return this.pgenCounterField;
+            }
+            set {
+                this.pgenCounterField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class RSAKeyValueType {
+        
+        private byte[] modulusField;
+        
+        private byte[] exponentField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Modulus {
+            get {
+                return this.modulusField;
+            }
+            set {
+                this.modulusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
+        public byte[] Exponent {
+            get {
+                return this.exponentField;
+            }
+            set {
+                this.exponentField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class RetrievalMethodType {
         
         private TransformType[] transformsField;
-        
-        private DigestMethodType digestMethodField;
-        
-        private byte[] digestValueField;
-        
-        private string idField;
         
         private string uRIField;
         
@@ -1173,38 +2852,6 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.transformsField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public DigestMethodType DigestMethod {
-            get {
-                return this.digestMethodField;
-            }
-            set {
-                this.digestMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary")]
-        public byte[] DigestValue {
-            get {
-                return this.digestValueField;
-            }
-            set {
-                this.digestValueField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string Id {
-            get {
-                return this.idField;
-            }
-            set {
-                this.idField = value;
             }
         }
         
@@ -1237,56 +2884,83 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class SignatureMethodType {
+    public partial class X509DataType {
         
-        private long hMACOutputLengthField;
+        private X509IssuerSerialType[] x509IssuerSerialField;
         
-        private bool hMACOutputLengthFieldSpecified;
+        private byte[][] x509SKIField;
         
-        private string[] textField;
+        private string[] x509SubjectNameField;
         
-        private string algorithmField;
+        private byte[][] x509CertificateField;
+        
+        private byte[][] x509CRLField;
+        
+        private System.Xml.XmlElement[] anyField;
         
         /// <remarks/>
-        public long HMACOutputLength {
+        [System.Xml.Serialization.XmlElementAttribute("X509IssuerSerial", IsNullable=true)]
+        public X509IssuerSerialType[] X509IssuerSerial {
             get {
-                return this.hMACOutputLengthField;
+                return this.x509IssuerSerialField;
             }
             set {
-                this.hMACOutputLengthField = value;
+                this.x509IssuerSerialField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool HMACOutputLengthSpecified {
+        [System.Xml.Serialization.XmlElementAttribute("X509SKI", DataType="base64Binary", IsNullable=true)]
+        public byte[][] X509SKI {
             get {
-                return this.hMACOutputLengthFieldSpecified;
+                return this.x509SKIField;
             }
             set {
-                this.hMACOutputLengthFieldSpecified = value;
+                this.x509SKIField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlTextAttribute()]
-        public string[] Text {
+        [System.Xml.Serialization.XmlElementAttribute("X509SubjectName", IsNullable=true)]
+        public string[] X509SubjectName {
             get {
-                return this.textField;
+                return this.x509SubjectNameField;
             }
             set {
-                this.textField = value;
+                this.x509SubjectNameField = value;
             }
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string Algorithm {
+        [System.Xml.Serialization.XmlElementAttribute("X509Certificate", DataType="base64Binary", IsNullable=true)]
+        public byte[][] X509Certificate {
             get {
-                return this.algorithmField;
+                return this.x509CertificateField;
             }
             set {
-                this.algorithmField = value;
+                this.x509CertificateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("X509CRL", DataType="base64Binary", IsNullable=true)]
+        public byte[][] X509CRL {
+            get {
+                return this.x509CRLField;
+            }
+            set {
+                this.x509CRLField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlElement[] Any {
+            get {
+                return this.anyField;
+            }
+            set {
+                this.anyField = value;
             }
         }
     }
@@ -1297,20 +2971,188 @@ namespace SCI.Reinf.Irko {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class CanonicalizationMethodType {
+    public partial class X509IssuerSerialType {
         
-        private string algorithmField;
+        private string x509IssuerNameField;
+        
+        private long x509SerialNumberField;
+        
+        /// <remarks/>
+        public string X509IssuerName {
+            get {
+                return this.x509IssuerNameField;
+            }
+            set {
+                this.x509IssuerNameField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public long X509SerialNumber {
+            get {
+                return this.x509SerialNumberField;
+            }
+            set {
+                this.x509SerialNumberField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class PGPDataType {
+        
+        private byte[] pGPKeyIDField;
+        
+        private byte[] pGPKeyPacketField;
+        
+        private System.Xml.XmlElement[] anyField;
+        
+        private byte[] pGPKeyPacket1Field;
+        
+        private System.Xml.XmlElement[] any1Field;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=0)]
+        public byte[] PGPKeyID {
+            get {
+                return this.pGPKeyIDField;
+            }
+            set {
+                this.pGPKeyIDField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(DataType="base64Binary", Order=1)]
+        public byte[] PGPKeyPacket {
+            get {
+                return this.pGPKeyPacketField;
+            }
+            set {
+                this.pGPKeyPacketField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyElementAttribute(Order=2)]
+        public System.Xml.XmlElement[] Any {
+            get {
+                return this.anyField;
+            }
+            set {
+                this.anyField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("PGPKeyPacket", DataType="base64Binary", Order=3)]
+        public byte[] PGPKeyPacket1 {
+            get {
+                return this.pGPKeyPacket1Field;
+            }
+            set {
+                this.pGPKeyPacket1Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyElementAttribute(Order=4)]
+        public System.Xml.XmlElement[] Any1 {
+            get {
+                return this.any1Field;
+            }
+            set {
+                this.any1Field = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class SPKIDataType {
+        
+        private byte[][] sPKISexpField;
+        
+        private System.Xml.XmlElement[] anyField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("SPKISexp", DataType="base64Binary")]
+        public byte[][] SPKISexp {
+            get {
+                return this.sPKISexpField;
+            }
+            set {
+                this.sPKISexpField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAnyElementAttribute()]
+        public System.Xml.XmlElement[] Any {
+            get {
+                return this.anyField;
+            }
+            set {
+                this.anyField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+    public partial class ObjectType {
+        
+        private string idField;
+        
+        private string mimeTypeField;
+        
+        private string encodingField;
         
         private string valueField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
-        public string Algorithm {
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string Id {
             get {
-                return this.algorithmField;
+                return this.idField;
             }
             set {
-                this.algorithmField = value;
+                this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute()]
+        public string MimeType {
+            get {
+                return this.mimeTypeField;
+            }
+            set {
+                this.mimeTypeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlAttributeAttribute(DataType="anyURI")]
+        public string Encoding {
+            get {
+                return this.encodingField;
+            }
+            set {
+                this.encodingField = value;
             }
         }
         
@@ -1331,51 +3173,27 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class SignedInfoType {
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TArquivoReinf", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class TArquivoReinf1 {
         
-        private CanonicalizationMethodType canonicalizationMethodField;
-        
-        private SignatureMethodType signatureMethodField;
-        
-        private ReferenceType[] referenceField;
+        private Reinf3 reinfField;
         
         private string idField;
         
         /// <remarks/>
-        public CanonicalizationMethodType CanonicalizationMethod {
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+        public Reinf3 Reinf {
             get {
-                return this.canonicalizationMethodField;
+                return this.reinfField;
             }
             set {
-                this.canonicalizationMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public SignatureMethodType SignatureMethod {
-            get {
-                return this.signatureMethodField;
-            }
-            set {
-                this.signatureMethodField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Reference", IsNullable=true)]
-        public ReferenceType[] Reference {
-            get {
-                return this.referenceField;
-            }
-            set {
-                this.referenceField = value;
+                this.reinfField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string Id {
+        public string id {
             get {
                 return this.idField;
             }
@@ -1390,63 +3208,174 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
-    public partial class SignatureType {
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ocorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class ocorrencias1 {
         
-        private SignedInfoType signedInfoField;
+        private long tipoField;
         
-        private SignatureValueType signatureValueField;
+        private string localizacaoErroAvisoField;
         
-        private KeyInfoType keyInfoField;
+        private string codigoField;
         
-        private ObjectType[] objectField;
+        private string descricaoField;
+        
+        /// <remarks/>
+        public long tipo {
+            get {
+                return this.tipoField;
+            }
+            set {
+                this.tipoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string localizacaoErroAviso {
+            get {
+                return this.localizacaoErroAvisoField;
+            }
+            set {
+                this.localizacaoErroAvisoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string codigo {
+            get {
+                return this.codigoField;
+            }
+            set {
+                this.codigoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string descricao {
+            get {
+                return this.descricaoField;
+            }
+            set {
+                this.descricaoField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class TStatus3 {
+        
+        private string cdStatusField;
+        
+        private string descRetornoField;
+        
+        private ocorrencias1[] dadosRegistroOcorrenciaLoteField;
+        
+        /// <remarks/>
+        public string cdStatus {
+            get {
+                return this.cdStatusField;
+            }
+            set {
+                this.cdStatusField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string descRetorno {
+            get {
+                return this.descRetornoField;
+            }
+            set {
+                this.descRetornoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public ocorrencias1[] dadosRegistroOcorrenciaLote {
+            get {
+                return this.dadosRegistroOcorrenciaLoteField;
+            }
+            set {
+                this.dadosRegistroOcorrenciaLoteField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TIdeTransmissor", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class TIdeTransmissor1 {
+        
+        private string idTransmissorField;
+        
+        /// <remarks/>
+        public string IdTransmissor {
+            get {
+                return this.idTransmissorField;
+            }
+            set {
+                this.idTransmissorField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="retornoLoteEventos", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class retornoLoteEventos1 {
+        
+        private TIdeTransmissor1 ideTransmissorField;
+        
+        private TStatus3 statusField;
+        
+        private TArquivoReinf1[] retornoEventosField;
         
         private string idField;
         
         /// <remarks/>
-        public SignedInfoType SignedInfo {
+        public TIdeTransmissor1 ideTransmissor {
             get {
-                return this.signedInfoField;
+                return this.ideTransmissorField;
             }
             set {
-                this.signedInfoField = value;
+                this.ideTransmissorField = value;
             }
         }
         
         /// <remarks/>
-        public SignatureValueType SignatureValue {
+        public TStatus3 status {
             get {
-                return this.signatureValueField;
+                return this.statusField;
             }
             set {
-                this.signatureValueField = value;
+                this.statusField = value;
             }
         }
         
         /// <remarks/>
-        public KeyInfoType KeyInfo {
+        [System.Xml.Serialization.XmlArrayItemAttribute("evento")]
+        public TArquivoReinf1[] retornoEventos {
             get {
-                return this.keyInfoField;
+                return this.retornoEventosField;
             }
             set {
-                this.keyInfoField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Object", IsNullable=true)]
-        public ObjectType[] Object {
-            get {
-                return this.objectField;
-            }
-            set {
-                this.objectField = value;
+                this.retornoEventosField = value;
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]
-        public string Id {
+        public string id {
             get {
                 return this.idField;
             }
@@ -1461,7 +3390,41 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    public partial class Reinf2 {
+        
+        private retornoLoteEventos1 retornoLoteEventosField;
+        
+        private SignatureType signatureField;
+        
+        /// <remarks/>
+        public retornoLoteEventos1 retornoLoteEventos {
+            get {
+                return this.retornoLoteEventosField;
+            }
+            set {
+                this.retornoLoteEventosField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.w3.org/2000/09/xmldsig#")]
+        public SignatureType Signature {
+            get {
+                return this.signatureField;
+            }
+            set {
+                this.signatureField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RCPRB", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class RCPRB1 {
         
         private string cRCPRBField;
@@ -1506,7 +3469,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RComl", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class RComl1 {
         
         private string cRComlField;
@@ -1551,14 +3514,38 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RRecRepAD", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class RRecRepAD1 {
+        
+        private string cnpjAssocDespField;
+        
+        private string vlrTotalRepField;
         
         private string cRRecRepADField;
         
         private string vlrCRRecRepADField;
         
         private string vlrCRRecRepADSuspField;
+        
+        /// <remarks/>
+        public string cnpjAssocDesp {
+            get {
+                return this.cnpjAssocDespField;
+            }
+            set {
+                this.cnpjAssocDespField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string vlrTotalRep {
+            get {
+                return this.vlrTotalRepField;
+            }
+            set {
+                this.vlrTotalRepField = value;
+            }
+        }
         
         /// <remarks/>
         public string CRRecRepAD {
@@ -1596,7 +3583,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RPrest", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class RPrest1 {
         
         private byte tpInscTomadorField;
@@ -1689,7 +3676,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="infoCRTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class infoCRTom1 {
         
         private string cRTomField;
@@ -1734,12 +3721,10 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="RTom", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class RTom1 {
         
         private string cnpjPrestadorField;
-        
-        private string cNOField;
         
         private string vlrTotalBaseRetField;
         
@@ -1752,16 +3737,6 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.cnpjPrestadorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CNO {
-            get {
-                return this.cNOField;
-            }
-            set {
-                this.cNOField = value;
             }
         }
         
@@ -1792,7 +3767,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class infoTotalContrib {
         
         private string nrRecArqBaseField;
@@ -1890,7 +3865,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class TDadosProcessamentoEvento {
         
         private string nrProtEntrField;
@@ -1959,7 +3934,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TRegistroOcorrencias", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class TRegistroOcorrencias1 {
         
         private long tpOcorrField;
@@ -2016,7 +3991,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class TStatus2 {
         
         private string cdRetornoField;
@@ -2062,7 +4037,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideRecRetorno", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class ideRecRetorno1 {
         
         private TStatus2 ideStatusField;
@@ -2083,7 +4058,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideContri", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class ideContri1 {
         
         private byte tpInscField;
@@ -2116,7 +4091,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="ideEvento", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class ideEvento1 {
         
         private string perApurField;
@@ -2137,7 +4112,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
     public partial class evtTotalContrib {
         
         private ideEvento1 ideEventoField;
@@ -2219,7 +4194,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RRecEspetDesp {
         
         private string cRRecEspetDespField;
@@ -2276,7 +4251,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RCPRB {
         
         private string cRCPRBField;
@@ -2321,7 +4296,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RComl {
         
         private string cRComlField;
@@ -2366,7 +4341,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RRecRepAD {
         
         private string cnpjAssocDespField;
@@ -2435,7 +4410,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RPrest {
         
         private byte tpInscTomadorField;
@@ -2528,7 +4503,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class infoCRTom {
         
         private string cRTomField;
@@ -2573,12 +4548,10 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class RTom {
         
         private string cnpjPrestadorField;
-        
-        private string cNOField;
         
         private string vlrTotalBaseRetField;
         
@@ -2591,16 +4564,6 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.cnpjPrestadorField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string CNO {
-            get {
-                return this.cNOField;
-            }
-            set {
-                this.cNOField = value;
             }
         }
         
@@ -2631,12 +4594,10 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
-    public partial class ideEstab {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
+    public partial class infoTotal {
         
-        private byte tpInscField;
-        
-        private string nrInscField;
+        private string nrRecArqBaseField;
         
         private RTom rTomField;
         
@@ -2651,22 +4612,12 @@ namespace SCI.Reinf.Irko {
         private RRecEspetDesp rRecEspetDespField;
         
         /// <remarks/>
-        public byte tpInsc {
+        public string nrRecArqBase {
             get {
-                return this.tpInscField;
+                return this.nrRecArqBaseField;
             }
             set {
-                this.tpInscField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public string nrInsc {
-            get {
-                return this.nrInscField;
-            }
-            set {
-                this.nrInscField = value;
+                this.nrRecArqBaseField = value;
             }
         }
         
@@ -2739,40 +4690,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
-    public partial class infoTotal {
-        
-        private string nrRecArqBaseField;
-        
-        private ideEstab ideEstabField;
-        
-        /// <remarks/>
-        public string nrRecArqBase {
-            get {
-                return this.nrRecArqBaseField;
-            }
-            set {
-                this.nrRecArqBaseField = value;
-            }
-        }
-        
-        /// <remarks/>
-        public ideEstab ideEstab {
-            get {
-                return this.ideEstabField;
-            }
-            set {
-                this.ideEstabField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class infoRecEv {
         
         private string nrProtEntrField;
@@ -2841,7 +4759,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class TRegistroOcorrencias {
         
         private long tpOcorrField;
@@ -2898,7 +4816,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="TStatus", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class TStatus1 {
         
         private string cdRetornoField;
@@ -2944,7 +4862,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class ideRecRetorno {
         
         private TStatus1 ideStatusField;
@@ -2965,7 +4883,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class ideContri {
         
         private byte tpInscField;
@@ -2998,7 +4916,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class ideEvento {
         
         private string perApurField;
@@ -3019,7 +4937,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class evtTotal {
         
         private ideEvento ideEventoField;
@@ -3101,7 +5019,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="Reinf", Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
     public partial class Reinf1 {
         
         private evtTotal evtTotalField;
@@ -3121,7 +5039,7 @@ namespace SCI.Reinf.Irko {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00")]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02")]
         public evtTotalContrib evtTotalContrib {
             get {
                 return this.evtTotalContribField;
@@ -3148,7 +5066,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class TArquivoReinf {
         
         private Reinf1 reinfField;
@@ -3156,7 +5074,7 @@ namespace SCI.Reinf.Irko {
         private string idField;
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00")]
+        [System.Xml.Serialization.XmlElementAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02")]
         public Reinf1 Reinf {
             get {
                 return this.reinfField;
@@ -3183,7 +5101,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class ocorrencias {
         
         private long tipoField;
@@ -3240,7 +5158,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class TStatus {
         
         private string cdStatusField;
@@ -3285,7 +5203,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class TIdeTransmissor {
         
         private string idTransmissorField;
@@ -3306,7 +5224,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class retornoLoteEventos {
         
         private TIdeTransmissor ideTransmissorField;
@@ -3365,7 +5283,7 @@ namespace SCI.Reinf.Irko {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02")]
     public partial class Reinf {
         
         private retornoLoteEventos retornoLoteEventosField;
@@ -3521,6 +5439,10 @@ namespace SCI.Reinf.Irko {
         
         private Reinf1 retornoRetornoTotEvt10300Field;
         
+        private Reinf2 retornoRetornoLote10400Field;
+        
+        private Reinf3 retornoRetornoTotEvt10400Field;
+        
         /// <remarks/>
         public Reinf RetornoRetornoLote10300 {
             get {
@@ -3538,6 +5460,26 @@ namespace SCI.Reinf.Irko {
             }
             set {
                 this.retornoRetornoTotEvt10300Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Reinf2 RetornoRetornoLote10400 {
+            get {
+                return this.retornoRetornoLote10400Field;
+            }
+            set {
+                this.retornoRetornoLote10400Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        public Reinf3 RetornoRetornoTotEvt10400 {
+            get {
+                return this.retornoRetornoTotEvt10400Field;
+            }
+            set {
+                this.retornoRetornoTotEvt10400Field = value;
             }
         }
     }

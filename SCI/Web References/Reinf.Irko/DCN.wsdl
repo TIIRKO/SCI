@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns5="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:ns4="http://www.w3.org/2000/09/xmldsig#" xmlns:s0="http://www.irko.com.br" xmlns:ns3="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:ns2="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02" xmlns:ns8="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" xmlns:ns5="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" xmlns:s0="http://www.irko.com.br" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:ns3="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns7="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns4="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns6="http://www.w3.org/2000/09/xmldsig#" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.irko.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.irko.com.br">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" />
       <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" />
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02" />
       <s:import namespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00" />
       <s:element name="GravarRetornoEvento">
         <s:complexType>
@@ -20,6 +22,7 @@
           <s:element minOccurs="0" name="DataProcessamento" type="s:dateTime" />
           <s:element minOccurs="0" name="Ids" type="s0:ArrayOfIdsItemString" />
           <s:element minOccurs="0" name="ArquivoXML" type="s:string" />
+          <s:element minOccurs="0" name="Versao" type="s:string" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="Empresa">
@@ -63,6 +66,8 @@
             <s:sequence>
               <s:element minOccurs="0" name="RetornoRetornoLote10300" type="ns2:Reinf" />
               <s:element minOccurs="0" name="RetornoRetornoTotEvt10300" type="ns3:Reinf" />
+              <s:element minOccurs="0" name="RetornoRetornoLote10400" type="ns4:Reinf" />
+              <s:element minOccurs="0" name="RetornoRetornoTotEvt10400" type="ns5:Reinf" />
             </s:sequence>
           </s:extension>
         </s:complexContent>
@@ -133,13 +138,13 @@
         </s:complexContent>
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00">
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" />
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_03_02">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02" />
       <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <s:complexType name="Reinf">
         <s:sequence>
           <s:element name="retornoLoteEventos" type="ns2:retornoLoteEventos" />
-          <s:element minOccurs="0" ref="ns4:Signature" />
+          <s:element minOccurs="0" ref="ns6:Signature" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="retornoLoteEventos">
@@ -155,7 +160,7 @@
           <s:element name="IdTransmissor">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="250" />
+                <s:maxLength value="14" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
@@ -235,15 +240,15 @@
         <s:attribute name="id" type="s:string" use="required" />
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00">
-      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" />
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_03_02">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02" />
       <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <s:element name="Reinf" type="ns3:Reinf" />
       <s:complexType name="Reinf">
         <s:sequence>
           <s:element minOccurs="0" name="evtTotal" type="ns3:evtTotal" />
-          <s:element minOccurs="0" ref="ns5:evtTotalContrib" />
-          <s:element minOccurs="0" ref="ns4:Signature" />
+          <s:element minOccurs="0" ref="ns7:evtTotalContrib" />
+          <s:element minOccurs="0" ref="ns6:Signature" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="evtTotal">
@@ -287,6 +292,7 @@
           <s:element name="nrInsc">
             <s:simpleType>
               <s:restriction base="s:string">
+                <s:pattern value="[0-9]{11}|[0-9]{8}|[0-9]{14}" />
                 <s:maxLength value="14" />
                 <s:minLength value="8" />
               </s:restriction>
@@ -407,25 +413,6 @@
               </s:restriction>
             </s:simpleType>
           </s:element>
-          <s:element minOccurs="0" name="ideEstab" type="ns3:ideEstab" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="ideEstab">
-        <s:sequence>
-          <s:element name="tpInsc">
-            <s:simpleType>
-              <s:restriction base="s:unsignedByte">
-                <s:pattern value="[1|4]" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
-          <s:element name="nrInsc">
-            <s:simpleType>
-              <s:restriction base="s:string">
-                <s:pattern value="[0-9]{14}" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
           <s:element minOccurs="0" name="RTom" type="ns3:RTom" />
           <s:element minOccurs="0" name="RPrest" type="ns3:RPrest" />
           <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns3:RRecRepAD" />
@@ -440,13 +427,6 @@
             <s:simpleType>
               <s:restriction base="s:string">
                 <s:pattern value="[0-9]{14}" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
-          <s:element minOccurs="0" name="CNO">
-            <s:simpleType>
-              <s:restriction base="s:string">
-                <s:pattern value="[0-9]{12}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -511,7 +491,9 @@
           <s:element name="nrInscTomador">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{14}" />
+                <s:pattern value="[0-9]{8}|[0-9]{14}|[a-zA-Z0-9./-]" />
+                <s:maxLength value="14" />
+                <s:minLength value="8" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -572,7 +554,9 @@
           <s:element name="cnpjAssocDesp">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:pattern value="[0-9]{14}" />
+                <s:pattern value="[0-9]{8}|[0-9]{14}" />
+                <s:maxLength value="14" />
+                <s:minLength value="8" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -723,32 +707,610 @@
         </s:sequence>
       </s:complexType>
     </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/retornoLoteEventos/v1_04_00">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00" />
+      <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
+      <s:complexType name="Reinf">
+        <s:sequence>
+          <s:element name="retornoLoteEventos" type="ns4:retornoLoteEventos" />
+          <s:element minOccurs="0" ref="ns6:Signature" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="retornoLoteEventos">
+        <s:sequence>
+          <s:element name="ideTransmissor" type="ns4:TIdeTransmissor" />
+          <s:element name="status" type="ns4:TStatus" />
+          <s:element minOccurs="0" name="retornoEventos" type="ns4:ArrayOfeventoTArquivoReinf" />
+        </s:sequence>
+        <s:attribute name="id" type="s:string" use="required" />
+      </s:complexType>
+      <s:complexType name="TIdeTransmissor">
+        <s:sequence>
+          <s:element name="IdTransmissor">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="250" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TStatus">
+        <s:sequence>
+          <s:element name="cdStatus">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="descRetorno">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="255" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="dadosRegistroOcorrenciaLote" type="ns4:ArrayOfocorrenciasocorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfocorrenciasocorrencias">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ocorrencias" nillable="true" type="ns4:ocorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ocorrencias">
+        <s:sequence>
+          <s:element name="tipo">
+            <s:simpleType>
+              <s:restriction base="s:long">
+                <s:totalDigits value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="localizacaoErroAviso">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="100" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="codigo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="descricao">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="255" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfeventoTArquivoReinf">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="evento" nillable="true" type="ns4:TArquivoReinf" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TArquivoReinf">
+        <s:sequence>
+          <s:element ref="ns5:Reinf" />
+        </s:sequence>
+        <s:attribute name="id" type="s:string" use="required" />
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotal/v1_04_00">
+      <s:import namespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00" />
+      <s:import namespace="http://www.w3.org/2000/09/xmldsig#" />
+      <s:element name="Reinf" type="ns5:Reinf" />
+      <s:complexType name="Reinf">
+        <s:sequence>
+          <s:element minOccurs="0" name="evtTotal" type="ns5:evtTotal" />
+          <s:element minOccurs="0" ref="ns8:evtTotalContrib" />
+          <s:element minOccurs="0" ref="ns6:Signature" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="evtTotal">
+        <s:sequence>
+          <s:element name="ideEvento" type="ns5:ideEvento" />
+          <s:element name="ideContri" type="ns5:ideContri" />
+          <s:element name="ideRecRetorno" type="ns5:ideRecRetorno" />
+          <s:element name="infoRecEv" type="ns5:infoRecEv" />
+          <s:element minOccurs="0" name="infoTotal" type="ns5:infoTotal" />
+        </s:sequence>
+        <s:attribute name="id" use="required">
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:maxLength value="250" />
+              <s:minLength value="0" />
+            </s:restriction>
+          </s:simpleType>
+        </s:attribute>
+      </s:complexType>
+      <s:complexType name="ideEvento">
+        <s:sequence>
+          <s:element minOccurs="0" name="perApur">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="250" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideContri">
+        <s:sequence>
+          <s:element name="tpInsc">
+            <s:simpleType>
+              <s:restriction base="s:unsignedByte">
+                <s:pattern value="1|2" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="nrInsc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="14" />
+                <s:minLength value="8" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideRecRetorno">
+        <s:sequence>
+          <s:element name="ideStatus" type="ns5:TStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TStatus">
+        <s:sequence>
+          <s:element name="cdRetorno">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="descRetorno">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="255" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="regOcorrs" nillable="true" type="ns5:TRegistroOcorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTRegistroOcorrenciasTRegistroOcorrencias">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TRegistroOcorrencias" nillable="true" type="ns5:TRegistroOcorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TRegistroOcorrencias">
+        <s:sequence>
+          <s:element name="tpOcorr">
+            <s:simpleType>
+              <s:restriction base="s:long">
+                <s:totalDigits value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="localErroAviso">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="codResp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="dscResp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1024" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="infoRecEv">
+        <s:sequence>
+          <s:element minOccurs="0" name="nrProtEntr">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="dhProcess" type="s:dateTime" />
+          <s:element minOccurs="0" name="tpEv">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="600" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="idEv">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="hash">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="infoTotal">
+        <s:sequence>
+          <s:element minOccurs="0" name="nrRecArqBase">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="52" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="ideEstab" type="ns5:ideEstab" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideEstab">
+        <s:sequence>
+          <s:element minOccurs="0" name="tpInsc" type="s:unsignedByte" />
+          <s:element minOccurs="0" name="nrInsc" type="s:string" />
+          <s:element minOccurs="0" name="RTom" type="ns5:RTom" />
+          <s:element minOccurs="0" name="RPrest" type="ns5:RPrest" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns5:RRecRepAD" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns5:RComl" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns5:RCPRB" />
+          <s:element minOccurs="0" name="RRecEspetDesp" type="ns5:RRecEspetDesp" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RTom">
+        <s:sequence>
+          <s:element name="cnpjPrestador">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CNO">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{12}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalBaseRet">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns5:infoCRTom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfinfoCRTominfoCRTom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns5:infoCRTom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="infoCRTom">
+        <s:sequence>
+          <s:element name="CRTom">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="VlrCRTom">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="VlrCRTomSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RPrest">
+        <s:sequence>
+          <s:element name="tpInscTomador">
+            <s:simpleType>
+              <s:restriction base="s:unsignedByte">
+                <s:pattern value="[1|4]" />
+                <s:maxInclusive value="4" />
+                <s:minInclusive value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="nrInscTomador">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalBaseRet">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalRetPrinc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalRetAdic">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalNRetPrinc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalNRetAdic">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRRecRepADRRecRepAD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns5:RRecRepAD" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RRecRepAD">
+        <s:sequence>
+          <s:element name="cnpjAssocDesp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalRep">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="CRRecRepAD">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRRecRepAD">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRRecRepADSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRComlRComl">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns5:RComl" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RComl">
+        <s:sequence>
+          <s:element name="CRComl">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRComl">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRComlSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRCPRBRCPRB">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns5:RCPRB" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RCPRB">
+        <s:sequence>
+          <s:element name="CRCPRB">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRCPRB">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRCPRBSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RRecEspetDesp">
+        <s:sequence>
+          <s:element name="CRRecEspetDesp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrReceitaTotal">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRRecEspetDesp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRRecEspetDespSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2000/09/xmldsig#">
-      <s:element name="Signature" type="ns4:SignatureType" />
+      <s:element name="Signature" type="ns6:SignatureType" />
       <s:complexType name="SignatureType">
         <s:sequence>
-          <s:element ref="ns4:SignedInfo" />
-          <s:element ref="ns4:SignatureValue" />
-          <s:element minOccurs="0" ref="ns4:KeyInfo" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:Object" />
+          <s:element ref="ns6:SignedInfo" />
+          <s:element ref="ns6:SignatureValue" />
+          <s:element minOccurs="0" ref="ns6:KeyInfo" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:Object" />
         </s:sequence>
         <s:attribute name="Id" type="s:string" />
       </s:complexType>
-      <s:element name="SignedInfo" type="ns4:SignedInfoType" />
-      <s:element name="SignatureValue" type="ns4:SignatureValueType" />
-      <s:element name="KeyInfo" type="ns4:KeyInfoType" />
-      <s:element name="Object" nillable="true" type="ns4:ObjectType" />
+      <s:element name="SignedInfo" type="ns6:SignedInfoType" />
+      <s:element name="SignatureValue" type="ns6:SignatureValueType" />
+      <s:element name="KeyInfo" type="ns6:KeyInfoType" />
+      <s:element name="Object" nillable="true" type="ns6:ObjectType" />
       <s:complexType name="SignedInfoType">
         <s:sequence>
-          <s:element ref="ns4:CanonicalizationMethod" />
-          <s:element ref="ns4:SignatureMethod" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:Reference" />
+          <s:element ref="ns6:CanonicalizationMethod" />
+          <s:element ref="ns6:SignatureMethod" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:Reference" />
         </s:sequence>
         <s:attribute name="Id" type="s:string" />
       </s:complexType>
-      <s:element name="CanonicalizationMethod" type="ns4:CanonicalizationMethodType" />
-      <s:element name="SignatureMethod" type="ns4:SignatureMethodType" />
-      <s:element name="Reference" nillable="true" type="ns4:ReferenceType" />
+      <s:element name="CanonicalizationMethod" type="ns6:CanonicalizationMethodType" />
+      <s:element name="SignatureMethod" type="ns6:SignatureMethodType" />
+      <s:element name="Reference" nillable="true" type="ns6:ReferenceType" />
       <s:complexType name="CanonicalizationMethodType">
         <s:simpleContent>
           <s:extension base="s:string">
@@ -758,7 +1320,7 @@
       </s:complexType>
       <s:complexType name="SignatureMethodType" mixed="true">
         <s:sequence>
-          <s:element minOccurs="0" name="HMACOutputLength" type="ns4:HMACOutputLengthType" />
+          <s:element minOccurs="0" name="HMACOutputLength" type="ns6:HMACOutputLengthType" />
         </s:sequence>
         <s:attribute name="Algorithm" type="s:anyURI" use="required" />
       </s:complexType>
@@ -767,31 +1329,31 @@
       </s:simpleType>
       <s:complexType name="ArrayOfReferenceTypeReferenceType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ReferenceType" nillable="true" type="ns4:ReferenceType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ReferenceType" nillable="true" type="ns6:ReferenceType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ReferenceType">
         <s:sequence>
-          <s:element minOccurs="0" ref="ns4:Transforms" />
-          <s:element ref="ns4:DigestMethod" />
-          <s:element ref="ns4:DigestValue" />
+          <s:element minOccurs="0" ref="ns6:Transforms" />
+          <s:element ref="ns6:DigestMethod" />
+          <s:element ref="ns6:DigestValue" />
         </s:sequence>
         <s:attribute name="Id" type="s:string" />
         <s:attribute name="URI" type="s:anyURI" />
         <s:attribute name="Type" type="s:anyURI" />
       </s:complexType>
-      <s:element name="Transforms" type="ns4:TransformsType" />
-      <s:element name="DigestMethod" type="ns4:DigestMethodType" />
-      <s:element name="DigestValue" type="ns4:DigestValueType" />
+      <s:element name="Transforms" type="ns6:TransformsType" />
+      <s:element name="DigestMethod" type="ns6:DigestMethodType" />
+      <s:element name="DigestValue" type="ns6:DigestValueType" />
       <s:complexType name="TransformsType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:Transform" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:Transform" />
         </s:sequence>
       </s:complexType>
-      <s:element name="Transform" nillable="true" type="ns4:TransformType" />
+      <s:element name="Transform" nillable="true" type="ns6:TransformType" />
       <s:complexType name="ArrayOfTransformTypeTransformType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="TransformType" nillable="true" type="ns4:TransformType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransformType" nillable="true" type="ns6:TransformType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="TransformType" mixed="true">
@@ -825,23 +1387,23 @@
       </s:complexType>
       <s:complexType name="KeyInfoType" mixed="true">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:KeyName" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:KeyValue" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:RetrievalMethod" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:X509Data" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:PGPData" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:SPKIData" />
-          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns4:MgmtData" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:KeyName" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:KeyValue" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:RetrievalMethod" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:X509Data" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:PGPData" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:SPKIData" />
+          <s:element minOccurs="0" maxOccurs="unbounded" ref="ns6:MgmtData" />
           <s:any minOccurs="0" maxOccurs="unbounded" />
         </s:sequence>
         <s:attribute name="Id" type="s:string" />
       </s:complexType>
       <s:element name="KeyName" nillable="true" type="s:string" />
-      <s:element name="KeyValue" nillable="true" type="ns4:KeyValueType" />
-      <s:element name="RetrievalMethod" nillable="true" type="ns4:RetrievalMethodType" />
-      <s:element name="X509Data" nillable="true" type="ns4:X509DataType" />
-      <s:element name="PGPData" nillable="true" type="ns4:PGPDataType" />
-      <s:element name="SPKIData" nillable="true" type="ns4:SPKIDataType" />
+      <s:element name="KeyValue" nillable="true" type="ns6:KeyValueType" />
+      <s:element name="RetrievalMethod" nillable="true" type="ns6:RetrievalMethodType" />
+      <s:element name="X509Data" nillable="true" type="ns6:X509DataType" />
+      <s:element name="PGPData" nillable="true" type="ns6:PGPDataType" />
+      <s:element name="SPKIData" nillable="true" type="ns6:SPKIDataType" />
       <s:element name="MgmtData" nillable="true" type="s:string" />
       <s:complexType name="ArrayOfKeyNameItemString">
         <s:sequence>
@@ -850,27 +1412,27 @@
       </s:complexType>
       <s:complexType name="ArrayOfKeyValueTypeKeyValueType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="KeyValueType" nillable="true" type="ns4:KeyValueType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="KeyValueType" nillable="true" type="ns6:KeyValueType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="KeyValueType" mixed="true">
         <s:sequence>
-          <s:element minOccurs="0" ref="ns4:DSAKeyValue" />
-          <s:element minOccurs="0" ref="ns4:RSAKeyValue" />
+          <s:element minOccurs="0" ref="ns6:DSAKeyValue" />
+          <s:element minOccurs="0" ref="ns6:RSAKeyValue" />
           <s:any minOccurs="0" />
         </s:sequence>
       </s:complexType>
-      <s:element name="DSAKeyValue" type="ns4:DSAKeyValueType" />
-      <s:element name="RSAKeyValue" type="ns4:RSAKeyValueType" />
+      <s:element name="DSAKeyValue" type="ns6:DSAKeyValueType" />
+      <s:element name="RSAKeyValue" type="ns6:RSAKeyValueType" />
       <s:complexType name="DSAKeyValueType">
         <s:sequence>
-          <s:element minOccurs="0" name="P" type="ns4:CryptoBinary" />
-          <s:element minOccurs="0" name="Q" type="ns4:CryptoBinary" />
-          <s:element minOccurs="0" name="G" type="ns4:CryptoBinary" />
-          <s:element name="Y" type="ns4:CryptoBinary" />
-          <s:element minOccurs="0" name="J" type="ns4:CryptoBinary" />
-          <s:element minOccurs="0" name="Seed" type="ns4:CryptoBinary" />
-          <s:element minOccurs="0" name="PgenCounter" type="ns4:CryptoBinary" />
+          <s:element minOccurs="0" name="P" type="ns6:CryptoBinary" />
+          <s:element minOccurs="0" name="Q" type="ns6:CryptoBinary" />
+          <s:element minOccurs="0" name="G" type="ns6:CryptoBinary" />
+          <s:element name="Y" type="ns6:CryptoBinary" />
+          <s:element minOccurs="0" name="J" type="ns6:CryptoBinary" />
+          <s:element minOccurs="0" name="Seed" type="ns6:CryptoBinary" />
+          <s:element minOccurs="0" name="PgenCounter" type="ns6:CryptoBinary" />
         </s:sequence>
       </s:complexType>
       <s:simpleType name="CryptoBinary">
@@ -878,30 +1440,30 @@
       </s:simpleType>
       <s:complexType name="RSAKeyValueType">
         <s:sequence>
-          <s:element name="Modulus" type="ns4:CryptoBinary" />
-          <s:element name="Exponent" type="ns4:CryptoBinary" />
+          <s:element name="Modulus" type="ns6:CryptoBinary" />
+          <s:element name="Exponent" type="ns6:CryptoBinary" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfRetrievalMethodTypeRetrievalMethodType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RetrievalMethodType" nillable="true" type="ns4:RetrievalMethodType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RetrievalMethodType" nillable="true" type="ns6:RetrievalMethodType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RetrievalMethodType">
         <s:sequence>
-          <s:element minOccurs="0" ref="ns4:Transforms" />
+          <s:element minOccurs="0" ref="ns6:Transforms" />
         </s:sequence>
         <s:attribute name="URI" type="s:anyURI" />
         <s:attribute name="Type" type="s:anyURI" />
       </s:complexType>
       <s:complexType name="ArrayOfX509DataTypeX509DataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="X509DataType" nillable="true" type="ns4:X509DataType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="X509DataType" nillable="true" type="ns6:X509DataType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="X509DataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="X509IssuerSerial" nillable="true" type="ns4:X509IssuerSerialType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="X509IssuerSerial" nillable="true" type="ns6:X509IssuerSerialType" />
           <s:element minOccurs="0" maxOccurs="unbounded" name="X509SKI" nillable="true" type="s:base64Binary" />
           <s:element minOccurs="0" maxOccurs="unbounded" name="X509SubjectName" nillable="true" type="s:string" />
           <s:element minOccurs="0" maxOccurs="unbounded" name="X509Certificate" nillable="true" type="s:base64Binary" />
@@ -911,7 +1473,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfX509IssuerSerialTypeX509IssuerSerialType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="X509IssuerSerialType" nillable="true" type="ns4:X509IssuerSerialType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="X509IssuerSerialType" nillable="true" type="ns6:X509IssuerSerialType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="X509IssuerSerialType">
@@ -942,7 +1504,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfPGPDataTypePGPDataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="PGPDataType" nillable="true" type="ns4:PGPDataType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PGPDataType" nillable="true" type="ns6:PGPDataType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="PGPDataType">
@@ -956,7 +1518,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfSPKIDataTypeSPKIDataType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="SPKIDataType" nillable="true" type="ns4:SPKIDataType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SPKIDataType" nillable="true" type="ns6:SPKIDataType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="SPKIDataType">
@@ -977,7 +1539,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfObjectTypeObjectType">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjectType" nillable="true" type="ns4:ObjectType" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ObjectType" nillable="true" type="ns6:ObjectType" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ObjectType">
@@ -990,15 +1552,15 @@
         </s:simpleContent>
       </s:complexType>
     </s:schema>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00">
-      <s:element name="evtTotalContrib" type="ns5:evtTotalContrib" />
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_03_02">
+      <s:element name="evtTotalContrib" type="ns7:evtTotalContrib" />
       <s:complexType name="evtTotalContrib">
         <s:sequence>
-          <s:element name="ideEvento" type="ns5:ideEvento" />
-          <s:element name="ideContri" type="ns5:ideContri" />
-          <s:element name="ideRecRetorno" type="ns5:ideRecRetorno" />
-          <s:element name="infoRecEv" type="ns5:TDadosProcessamentoEvento" />
-          <s:element minOccurs="0" name="infoTotalContrib" type="ns5:infoTotalContrib" />
+          <s:element name="ideEvento" type="ns7:ideEvento" />
+          <s:element name="ideContri" type="ns7:ideContri" />
+          <s:element name="ideRecRetorno" type="ns7:ideRecRetorno" />
+          <s:element name="infoRecEv" type="ns7:TDadosProcessamentoEvento" />
+          <s:element minOccurs="0" name="infoTotalContrib" type="ns7:infoTotalContrib" />
         </s:sequence>
         <s:attribute name="id">
           <s:simpleType>
@@ -1029,7 +1591,7 @@
       </s:complexType>
       <s:complexType name="ideRecRetorno">
         <s:sequence>
-          <s:element name="ideStatus" type="ns5:TStatus" />
+          <s:element name="ideStatus" type="ns7:TStatus" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="TStatus">
@@ -1045,17 +1607,17 @@
           <s:element name="descRetorno">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="255" />
                 <s:minLength value="1" />
               </s:restriction>
             </s:simpleType>
           </s:element>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="regOcorrs" nillable="true" type="ns5:TRegistroOcorrencias" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="regOcorrs" nillable="true" type="ns7:TRegistroOcorrencias" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfTRegistroOcorrenciasTRegistroOcorrencias">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="TRegistroOcorrencias" nillable="true" type="ns5:TRegistroOcorrencias" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TRegistroOcorrencias" nillable="true" type="ns7:TRegistroOcorrencias" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="TRegistroOcorrencias">
@@ -1147,16 +1709,16 @@
               </s:restriction>
             </s:simpleType>
           </s:element>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns5:RTom" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns5:RPrest" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns5:RRecRepAD" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns5:RComl" />
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns5:RCPRB" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns7:RTom" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns7:RPrest" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns7:RRecRepAD" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns7:RComl" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns7:RCPRB" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfRTomRTom">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns5:RTom" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns7:RTom" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RTom">
@@ -1165,13 +1727,6 @@
             <s:simpleType>
               <s:restriction base="s:string">
                 <s:pattern value="[0-9]{14}" />
-              </s:restriction>
-            </s:simpleType>
-          </s:element>
-          <s:element minOccurs="0" name="CNO">
-            <s:simpleType>
-              <s:restriction base="s:string">
-                <s:pattern value="[0-9]{12}" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -1184,12 +1739,12 @@
               </s:restriction>
             </s:simpleType>
           </s:element>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns5:infoCRTom" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns7:infoCRTom" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="ArrayOfinfoCRTominfoCRTom">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns5:infoCRTom" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns7:infoCRTom" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="infoCRTom">
@@ -1224,7 +1779,434 @@
       </s:complexType>
       <s:complexType name="ArrayOfRPrestRPrest">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns5:RPrest" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns7:RPrest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RPrest">
+        <s:sequence>
+          <s:element name="tpInscTomador">
+            <s:simpleType>
+              <s:restriction base="s:unsignedByte">
+                <s:pattern value="[1|4]" />
+                <s:maxInclusive value="4" />
+                <s:minInclusive value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="nrInscTomador">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="14" />
+                <s:minLength value="8" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalBaseRet">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalRetPrinc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalRetAdic">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalNRetPrinc">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrTotalNRetAdic">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRRecRepADRRecRepAD">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns7:RRecRepAD" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RRecRepAD">
+        <s:sequence>
+          <s:element name="cnpjAssocDesp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{8}|[0-9]{14}" />
+                <s:maxLength value="14" />
+                <s:minLength value="8" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalRep">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="CRRecRepAD">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRRecRepAD">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRRecRepADSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRComlRComl">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns7:RComl" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RComl">
+        <s:sequence>
+          <s:element name="CRComl">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRComl">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRComlSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRCPRBRCPRB">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns7:RCPRB" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RCPRB">
+        <s:sequence>
+          <s:element name="CRCPRB">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrCRCPRB">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="vlrCRCPRBSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.reinf.esocial.gov.br/schemas/evtTotalContrib/v1_04_00">
+      <s:element name="evtTotalContrib" type="ns8:evtTotalContrib" />
+      <s:complexType name="evtTotalContrib">
+        <s:sequence>
+          <s:element name="ideEvento" type="ns8:ideEvento" />
+          <s:element name="ideContri" type="ns8:ideContri" />
+          <s:element name="ideRecRetorno" type="ns8:ideRecRetorno" />
+          <s:element name="infoRecEv" type="ns8:TDadosProcessamentoEvento" />
+          <s:element minOccurs="0" name="infoTotalContrib" type="ns8:infoTotalContrib" />
+        </s:sequence>
+        <s:attribute name="id">
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:maxLength value="1024" />
+              <s:minLength value="0" />
+            </s:restriction>
+          </s:simpleType>
+        </s:attribute>
+      </s:complexType>
+      <s:complexType name="ideEvento">
+        <s:sequence>
+          <s:element minOccurs="0" name="perApur">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="250" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideContri">
+        <s:sequence>
+          <s:element name="tpInsc" type="s:unsignedByte" />
+          <s:element name="nrInsc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ideRecRetorno">
+        <s:sequence>
+          <s:element name="ideStatus" type="ns8:TStatus" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TStatus">
+        <s:sequence>
+          <s:element name="cdRetorno">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="descRetorno">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="regOcorrs" nillable="true" type="ns8:TRegistroOcorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTRegistroOcorrenciasTRegistroOcorrencias">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TRegistroOcorrencias" nillable="true" type="ns8:TRegistroOcorrencias" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TRegistroOcorrencias">
+        <s:sequence>
+          <s:element name="tpOcorr">
+            <s:simpleType>
+              <s:restriction base="s:long">
+                <s:totalDigits value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="localErroAviso">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="codResp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="dscResp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1024" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TDadosProcessamentoEvento">
+        <s:sequence>
+          <s:element minOccurs="0" name="nrProtEntr">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="2000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="dhProcess" type="s:dateTime" />
+          <s:element minOccurs="0" name="tpEv">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="idEv">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="hash">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+                <s:minLength value="0" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="infoTotalContrib">
+        <s:sequence>
+          <s:element minOccurs="0" name="nrRecArqBase">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="52" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="indExistInfo">
+            <s:simpleType>
+              <s:restriction base="s:unsignedInt">
+                <s:pattern value="[1-3]{1}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns8:RTom" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns8:RPrest" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns8:RRecRepAD" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns8:RComl" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns8:RCPRB" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRTomRTom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RTom" nillable="true" type="ns8:RTom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RTom">
+        <s:sequence>
+          <s:element name="cnpjPrestador">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{14}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="CNO">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{12}" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="vlrTotalBaseRet">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns8:infoCRTom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfinfoCRTominfoCRTom">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="infoCRTom" nillable="true" type="ns8:infoCRTom" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="infoCRTom">
+        <s:sequence>
+          <s:element name="CRTom">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="6" />
+                <s:minLength value="1" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element name="VlrCRTom">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+          <s:element minOccurs="0" name="VlrCRTomSusp">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:pattern value="[0-9]{1,14}[,][0-9]{2}" />
+                <s:maxLength value="17" />
+                <s:minLength value="4" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRPrestRPrest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RPrest" nillable="true" type="ns8:RPrest" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RPrest">
@@ -1294,7 +2276,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRRecRepADRRecRepAD">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns5:RRecRepAD" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RRecRepAD" nillable="true" type="ns8:RRecRepAD" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RRecRepAD">
@@ -1329,7 +2311,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRComlRComl">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns5:RComl" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RComl" nillable="true" type="ns8:RComl" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RComl">
@@ -1364,7 +2346,7 @@
       </s:complexType>
       <s:complexType name="ArrayOfRCPRBRCPRB">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns5:RCPRB" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RCPRB" nillable="true" type="ns8:RCPRB" />
         </s:sequence>
       </s:complexType>
       <s:complexType name="RCPRB">

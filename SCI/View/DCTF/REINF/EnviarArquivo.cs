@@ -352,33 +352,127 @@ namespace SCI.View.DCTF.REINF
                                     {
                                         if (((SCI.Reinf.Irko.TipoEvento)_check.Tag).Codigo == "R-5011")
                                         {
-                                            Reinf.Irko.evtTotalContrib _retornoLoteEventos = _retornoWR.RetornoRetornoTotEvt10300.evtTotalContrib;
-                                            _contador++;
-
-                                            TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
-
-                                            TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.ideRecRetorno.ideStatus.descRetorno);
-
-                                            TreeNode _nodeId = new TreeNode(_retornoLoteEventos.id);
-
-                                            _retornoLoteEventos.ideRecRetorno.ideStatus.regOcorrs?.ToList().ForEach(_ocorr =>
+                                            if (_retornoWR.RetornoRetornoTotEvt10300 != null)
                                             {
-                                                TreeNode _nodeTpOcorr = new TreeNode(_ocorr.tpOcorr.ToString());
-                                                _nodeId.Nodes.Add(_nodeTpOcorr);
-                                                TreeNode _nodeCodResp = new TreeNode(_ocorr.codResp);
-                                                _nodeId.Nodes.Add(_nodeCodResp);
-                                                TreeNode _nodeDscResp = new TreeNode(_ocorr.dscResp);
-                                                _nodeId.Nodes.Add(_nodeDscResp);
-                                            });
+                                                Reinf.Irko.evtTotalContrib _retornoLoteEventos = _retornoWR.RetornoRetornoTotEvt10300.evtTotalContrib;
+                                                _contador++;
 
-                                            _nodeStatus.Nodes.Add(_nodeId);
+                                                TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
 
-                                            _nodeArquivo.Nodes.Add(_nodeStatus);
-                                            _nodeCheck.Nodes.Add(_nodeArquivo);
+                                                TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.ideRecRetorno.ideStatus.descRetorno);
+
+                                                TreeNode _nodeId = new TreeNode(_retornoLoteEventos.id);
+
+                                                _retornoLoteEventos.ideRecRetorno.ideStatus.regOcorrs?.ToList().ForEach(_ocorr =>
+                                                {
+                                                    TreeNode _nodeTpOcorr = new TreeNode(_ocorr.tpOcorr.ToString());
+                                                    _nodeId.Nodes.Add(_nodeTpOcorr);
+                                                    TreeNode _nodeCodResp = new TreeNode(_ocorr.codResp);
+                                                    _nodeId.Nodes.Add(_nodeCodResp);
+                                                    TreeNode _nodeDscResp = new TreeNode(_ocorr.dscResp);
+                                                    _nodeId.Nodes.Add(_nodeDscResp);
+                                                });
+
+                                                _nodeStatus.Nodes.Add(_nodeId);
+
+                                                _nodeArquivo.Nodes.Add(_nodeStatus);
+                                                _nodeCheck.Nodes.Add(_nodeArquivo);
+                                            }
+                                            else
+                                            {
+                                                Reinf.Irko.evtTotalContrib1 _retornoLoteEventos = _retornoWR.RetornoRetornoTotEvt10400.evtTotalContrib;
+                                                _contador++;
+
+                                                TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
+
+                                                TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.ideRecRetorno.ideStatus.descRetorno);
+
+                                                TreeNode _nodeId = new TreeNode(_retornoLoteEventos.id);
+
+                                                _retornoLoteEventos.ideRecRetorno.ideStatus.regOcorrs?.ToList().ForEach(_ocorr =>
+                                                {
+                                                    TreeNode _nodeTpOcorr = new TreeNode(_ocorr.tpOcorr.ToString());
+                                                    _nodeId.Nodes.Add(_nodeTpOcorr);
+                                                    TreeNode _nodeCodResp = new TreeNode(_ocorr.codResp);
+                                                    _nodeId.Nodes.Add(_nodeCodResp);
+                                                    TreeNode _nodeDscResp = new TreeNode(_ocorr.dscResp);
+                                                    _nodeId.Nodes.Add(_nodeDscResp);
+                                                });
+
+                                                _nodeStatus.Nodes.Add(_nodeId);
+
+                                                _nodeArquivo.Nodes.Add(_nodeStatus);
+                                                _nodeCheck.Nodes.Add(_nodeArquivo);
+                                            }
                                         }
                                         else
                                         {
-                                            Reinf.Irko.retornoLoteEventos _retornoLoteEventos = _retornoWR.RetornoRetornoLote10300.retornoLoteEventos;
+                                            if (_retornoWR.RetornoRetornoLote10300 != null)
+                                            {
+                                                Reinf.Irko.retornoLoteEventos _retornoLoteEventos = _retornoWR.RetornoRetornoLote10300.retornoLoteEventos;
+                                                _contador++;
+
+                                                TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
+
+                                                TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.status.descRetorno);
+
+                                                _retornoLoteEventos.retornoEventos.ToList().ForEach(_evento =>
+                                                {
+                                                    TreeNode _nodeId = new TreeNode(_evento.id);
+
+                                                    TreeNode _nodeStatusId = new TreeNode(_evento.Reinf.evtTotal.ideRecRetorno.ideStatus.descRetorno);
+                                                    _evento.Reinf.evtTotal.ideRecRetorno.ideStatus.regOcorrs?.ToList().ForEach(_ocorr =>
+                                                    {
+                                                        TreeNode _nodeTpOcorr = new TreeNode(_ocorr.tpOcorr.ToString());
+                                                        _nodeStatusId.Nodes.Add(_nodeTpOcorr);
+                                                        TreeNode _nodeCodResp = new TreeNode(_ocorr.codResp);
+                                                        _nodeStatusId.Nodes.Add(_nodeCodResp);
+                                                        TreeNode _nodeDscResp = new TreeNode(_ocorr.dscResp);
+                                                        _nodeStatusId.Nodes.Add(_nodeDscResp);
+                                                    });
+
+                                                    _nodeId.Nodes.Add(_nodeStatusId);
+                                                    _nodeStatus.Nodes.Add(_nodeId);
+                                                });
+
+                                                _nodeArquivo.Nodes.Add(_nodeStatus);
+                                                _nodeCheck.Nodes.Add(_nodeArquivo);
+                                            }
+                                            else
+                                            {
+                                                Reinf.Irko.retornoLoteEventos1 _retornoLoteEventos = _retornoWR.RetornoRetornoLote10400.retornoLoteEventos;
+                                                _contador++;
+
+                                                TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
+
+                                                TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.status.descRetorno);
+
+                                                _retornoLoteEventos.retornoEventos.ToList().ForEach(_evento =>
+                                                {
+                                                    TreeNode _nodeId = new TreeNode(_evento.id);
+
+                                                    TreeNode _nodeStatusId = new TreeNode(_evento.Reinf.evtTotal.ideRecRetorno.ideStatus.descRetorno);
+                                                    _evento.Reinf.evtTotal.ideRecRetorno.ideStatus.regOcorrs?.ToList().ForEach(_ocorr =>
+                                                    {
+                                                        TreeNode _nodeTpOcorr = new TreeNode(_ocorr.tpOcorr.ToString());
+                                                        _nodeStatusId.Nodes.Add(_nodeTpOcorr);
+                                                        TreeNode _nodeCodResp = new TreeNode(_ocorr.codResp);
+                                                        _nodeStatusId.Nodes.Add(_nodeCodResp);
+                                                        TreeNode _nodeDscResp = new TreeNode(_ocorr.dscResp);
+                                                        _nodeStatusId.Nodes.Add(_nodeDscResp);
+                                                    });
+
+                                                    _nodeId.Nodes.Add(_nodeStatusId);
+                                                    _nodeStatus.Nodes.Add(_nodeId);
+                                                });
+
+                                                _nodeArquivo.Nodes.Add(_nodeStatus);
+                                                _nodeCheck.Nodes.Add(_nodeArquivo);
+                                            }
+                                                
+                                            
+
+                                            /*Reinf.Irko.retornoLoteEventos1 _retornoLoteEventos = _retornoWR.RetornoRetornoLote10400.retornoLoteEventos;
                                             _contador++;
 
                                             TreeNode _nodeArquivo = new TreeNode("Arquivo " + _contador.ToString());
@@ -405,7 +499,7 @@ namespace SCI.View.DCTF.REINF
                                         });
 
                                             _nodeArquivo.Nodes.Add(_nodeStatus);
-                                            _nodeCheck.Nodes.Add(_nodeArquivo);
+                                            _nodeCheck.Nodes.Add(_nodeArquivo);*/
                                         }
                                     }
                                     else
@@ -441,13 +535,23 @@ namespace SCI.View.DCTF.REINF
 
         private Reinf.Irko.ResultadoGravarRetornoEvento GravarEnvio(XmlNode _retorno, List<string> _listaId, string _cnpj, string _tipo)
         {
+            XmlDocument _xml = new XmlDocument();
+            _xml.LoadXml(_retorno.OuterXml);
+
+            XmlElement _root = _xml.DocumentElement;
+
+            String _xmlns = _root.Attributes["xmlns"].Value;
+
+            String [] _versao = _xmlns.Split('/');
+
             Reinf.Irko.RetornoXML _parametro = new Reinf.Irko.RetornoXML
             {
                 Empresa = new Reinf.Irko.Empresa() { Codigo = GetDesktop().GetEmpresa().Codigo, StatusSpecified = false },
                 Usuario = new Reinf.Irko.Usuario() { Codigo = GetDesktop().GetUsuario().Codigo, DataInicio = DateTime.Now, StatusSpecified = false },
                 DataProcessamento = DateTime.Now,
                 ArquivoXML = _retorno.OuterXml,
-                Ids = _listaId?.ToArray()
+                Ids = _listaId?.ToArray(),
+                Versao = _versao[5]
             };
 
             Reinf.Irko.ResultadoGravarRetornoEvento _retornoWR = wrReinf.GravarRetornoEvento(Guid, _parametro, _tipo);
