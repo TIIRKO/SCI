@@ -416,7 +416,7 @@ namespace SCI.View.DCTF.REINF
 
                                                 TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.status.descRetorno);
 
-                                                _retornoLoteEventos.retornoEventos.ToList().ForEach(_evento =>
+                                                _retornoLoteEventos.retornoEventos?.ToList().ForEach(_evento =>
                                                 {
                                                     TreeNode _nodeId = new TreeNode(_evento.id);
 
@@ -435,6 +435,15 @@ namespace SCI.View.DCTF.REINF
                                                     _nodeStatus.Nodes.Add(_nodeId);
                                                 });
 
+                                                _retornoLoteEventos.status.dadosRegistroOcorrenciaLote?.ToList().ForEach(_evento =>
+                                                {
+                                                    TreeNode _nodeCodigo = new TreeNode(_evento.codigo);
+                                                    TreeNode _nodeDescricao = new TreeNode(_evento.descricao);
+
+                                                    _nodeCodigo.Nodes.Add(_nodeDescricao);
+                                                    _nodeStatus.Nodes.Add(_nodeCodigo);
+                                                });
+
                                                 _nodeArquivo.Nodes.Add(_nodeStatus);
                                                 _nodeCheck.Nodes.Add(_nodeArquivo);
                                             }
@@ -447,7 +456,7 @@ namespace SCI.View.DCTF.REINF
 
                                                 TreeNode _nodeStatus = new TreeNode(_retornoLoteEventos.status.descRetorno);
 
-                                                _retornoLoteEventos.retornoEventos.ToList().ForEach(_evento =>
+                                                _retornoLoteEventos.retornoEventos?.ToList().ForEach(_evento =>
                                                 {
                                                     TreeNode _nodeId = new TreeNode(_evento.id);
 
@@ -464,6 +473,15 @@ namespace SCI.View.DCTF.REINF
 
                                                     _nodeId.Nodes.Add(_nodeStatusId);
                                                     _nodeStatus.Nodes.Add(_nodeId);
+                                                });
+
+                                                _retornoLoteEventos.status.dadosRegistroOcorrenciaLote?.ToList().ForEach(_evento =>
+                                                {
+                                                    TreeNode _nodeCodigo = new TreeNode(_evento.codigo);
+                                                    TreeNode _nodeDescricao = new TreeNode(_evento.descricao);
+
+                                                    _nodeCodigo.Nodes.Add(_nodeDescricao);
+                                                    _nodeStatus.Nodes.Add(_nodeCodigo);
                                                 });
 
                                                 _nodeArquivo.Nodes.Add(_nodeStatus);
