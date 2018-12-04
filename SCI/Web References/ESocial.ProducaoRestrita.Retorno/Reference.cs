@@ -24,7 +24,7 @@ namespace SCI.ESocial.ProducaoRestrita.Retorno {
     
     /// <remarks/>
     // CODEGEN: O elemento de extensão WSDL opcional 'PolicyReference' do espaço para nome 'http://schemas.xmlsoap.org/ws/2004/09/policy' não foi tratado.
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="Servicos.Empregador_ServicoConsultarLoteEventos", Namespace="http://www.esocial.gov.br/servicos/empregador/lote/eventos/envio/consulta/retorno" +
@@ -126,11 +126,11 @@ namespace SCI.ESocial.ProducaoRestrita.Retorno {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void ConsultarLoteEventosCompletedEventHandler(object sender, ConsultarLoteEventosCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ConsultarLoteEventosCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
