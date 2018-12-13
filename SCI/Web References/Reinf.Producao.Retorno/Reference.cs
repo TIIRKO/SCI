@@ -32,6 +32,16 @@ namespace SCI.Reinf.Producao.Retorno {
         
         private System.Threading.SendOrPostCallback ConsultaInformacoesConsolidadasOperationCompleted;
         
+        private System.Threading.SendOrPostCallback ConsultaReciboEvento2010OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultaReciboEvento2020OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultaReciboEvento2030OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultaReciboEvento2040OperationCompleted;
+        
+        private System.Threading.SendOrPostCallback ConsultaReciboEvento2050OperationCompleted;
+        
         private bool useDefaultCredentialsSetExplicitly;
         
         /// <remarks/>
@@ -74,6 +84,21 @@ namespace SCI.Reinf.Producao.Retorno {
         public event ConsultaInformacoesConsolidadasCompletedEventHandler ConsultaInformacoesConsolidadasCompleted;
         
         /// <remarks/>
+        public event ConsultaReciboEvento2010CompletedEventHandler ConsultaReciboEvento2010Completed;
+        
+        /// <remarks/>
+        public event ConsultaReciboEvento2020CompletedEventHandler ConsultaReciboEvento2020Completed;
+        
+        /// <remarks/>
+        public event ConsultaReciboEvento2030CompletedEventHandler ConsultaReciboEvento2030Completed;
+        
+        /// <remarks/>
+        public event ConsultaReciboEvento2040CompletedEventHandler ConsultaReciboEvento2040Completed;
+        
+        /// <remarks/>
+        public event ConsultaReciboEvento2050CompletedEventHandler ConsultaReciboEvento2050Completed;
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaInformacoesConsolidadas", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Xml.XmlNode ConsultaInformacoesConsolidadas(byte tipoInscricaoContribuinte, string numeroInscricaoContribuinte, string numeroProtocoloFechamento) {
             object[] results = this.Invoke("ConsultaInformacoesConsolidadas", new object[] {
@@ -103,6 +128,199 @@ namespace SCI.Reinf.Producao.Retorno {
             if ((this.ConsultaInformacoesConsolidadasCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.ConsultaInformacoesConsolidadasCompleted(this, new ConsultaInformacoesConsolidadasCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaReciboEvento2010", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Xml.XmlNode ConsultaReciboEvento2010(int tipoEvento, byte tpInsc, string nrInsc, string perApur, byte tpInscEstab, string nrInscEstab, string cnpjPrestador) {
+            object[] results = this.Invoke("ConsultaReciboEvento2010", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        tpInscEstab,
+                        nrInscEstab,
+                        cnpjPrestador});
+            return ((System.Xml.XmlNode)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2010Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, byte tpInscEstab, string nrInscEstab, string cnpjPrestador) {
+            this.ConsultaReciboEvento2010Async(tipoEvento, tpInsc, nrInsc, perApur, tpInscEstab, nrInscEstab, cnpjPrestador, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2010Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, byte tpInscEstab, string nrInscEstab, string cnpjPrestador, object userState) {
+            if ((this.ConsultaReciboEvento2010OperationCompleted == null)) {
+                this.ConsultaReciboEvento2010OperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultaReciboEvento2010OperationCompleted);
+            }
+            this.InvokeAsync("ConsultaReciboEvento2010", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        tpInscEstab,
+                        nrInscEstab,
+                        cnpjPrestador}, this.ConsultaReciboEvento2010OperationCompleted, userState);
+        }
+        
+        private void OnConsultaReciboEvento2010OperationCompleted(object arg) {
+            if ((this.ConsultaReciboEvento2010Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultaReciboEvento2010Completed(this, new ConsultaReciboEvento2010CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaReciboEvento2020", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Xml.XmlNode ConsultaReciboEvento2020(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstabPrest, byte tpInscTomador, string nrInscTomador) {
+            object[] results = this.Invoke("ConsultaReciboEvento2020", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstabPrest,
+                        tpInscTomador,
+                        nrInscTomador});
+            return ((System.Xml.XmlNode)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2020Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstabPrest, byte tpInscTomador, string nrInscTomador) {
+            this.ConsultaReciboEvento2020Async(tipoEvento, tpInsc, nrInsc, perApur, nrInscEstabPrest, tpInscTomador, nrInscTomador, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2020Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstabPrest, byte tpInscTomador, string nrInscTomador, object userState) {
+            if ((this.ConsultaReciboEvento2020OperationCompleted == null)) {
+                this.ConsultaReciboEvento2020OperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultaReciboEvento2020OperationCompleted);
+            }
+            this.InvokeAsync("ConsultaReciboEvento2020", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstabPrest,
+                        tpInscTomador,
+                        nrInscTomador}, this.ConsultaReciboEvento2020OperationCompleted, userState);
+        }
+        
+        private void OnConsultaReciboEvento2020OperationCompleted(object arg) {
+            if ((this.ConsultaReciboEvento2020Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultaReciboEvento2020Completed(this, new ConsultaReciboEvento2020CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaReciboEvento2030", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Xml.XmlNode ConsultaReciboEvento2030(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            object[] results = this.Invoke("ConsultaReciboEvento2030", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab});
+            return ((System.Xml.XmlNode)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2030Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            this.ConsultaReciboEvento2030Async(tipoEvento, tpInsc, nrInsc, perApur, nrInscEstab, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2030Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab, object userState) {
+            if ((this.ConsultaReciboEvento2030OperationCompleted == null)) {
+                this.ConsultaReciboEvento2030OperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultaReciboEvento2030OperationCompleted);
+            }
+            this.InvokeAsync("ConsultaReciboEvento2030", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab}, this.ConsultaReciboEvento2030OperationCompleted, userState);
+        }
+        
+        private void OnConsultaReciboEvento2030OperationCompleted(object arg) {
+            if ((this.ConsultaReciboEvento2030Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultaReciboEvento2030Completed(this, new ConsultaReciboEvento2030CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaReciboEvento2040", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Xml.XmlNode ConsultaReciboEvento2040(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            object[] results = this.Invoke("ConsultaReciboEvento2040", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab});
+            return ((System.Xml.XmlNode)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2040Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            this.ConsultaReciboEvento2040Async(tipoEvento, tpInsc, nrInsc, perApur, nrInscEstab, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2040Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab, object userState) {
+            if ((this.ConsultaReciboEvento2040OperationCompleted == null)) {
+                this.ConsultaReciboEvento2040OperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultaReciboEvento2040OperationCompleted);
+            }
+            this.InvokeAsync("ConsultaReciboEvento2040", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab}, this.ConsultaReciboEvento2040OperationCompleted, userState);
+        }
+        
+        private void OnConsultaReciboEvento2040OperationCompleted(object arg) {
+            if ((this.ConsultaReciboEvento2040Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultaReciboEvento2040Completed(this, new ConsultaReciboEvento2040CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://sped.fazenda.gov.br/ConsultasReinf/ConsultaReciboEvento2050", RequestNamespace="http://sped.fazenda.gov.br/", ResponseNamespace="http://sped.fazenda.gov.br/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Xml.XmlNode ConsultaReciboEvento2050(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            object[] results = this.Invoke("ConsultaReciboEvento2050", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab});
+            return ((System.Xml.XmlNode)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2050Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab) {
+            this.ConsultaReciboEvento2050Async(tipoEvento, tpInsc, nrInsc, perApur, nrInscEstab, null);
+        }
+        
+        /// <remarks/>
+        public void ConsultaReciboEvento2050Async(int tipoEvento, byte tpInsc, string nrInsc, string perApur, string nrInscEstab, object userState) {
+            if ((this.ConsultaReciboEvento2050OperationCompleted == null)) {
+                this.ConsultaReciboEvento2050OperationCompleted = new System.Threading.SendOrPostCallback(this.OnConsultaReciboEvento2050OperationCompleted);
+            }
+            this.InvokeAsync("ConsultaReciboEvento2050", new object[] {
+                        tipoEvento,
+                        tpInsc,
+                        nrInsc,
+                        perApur,
+                        nrInscEstab}, this.ConsultaReciboEvento2050OperationCompleted, userState);
+        }
+        
+        private void OnConsultaReciboEvento2050OperationCompleted(object arg) {
+            if ((this.ConsultaReciboEvento2050Completed != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.ConsultaReciboEvento2050Completed(this, new ConsultaReciboEvento2050CompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -138,6 +356,136 @@ namespace SCI.Reinf.Producao.Retorno {
         private object[] results;
         
         internal ConsultaInformacoesConsolidadasCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Xml.XmlNode Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Xml.XmlNode)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    public delegate void ConsultaReciboEvento2010CompletedEventHandler(object sender, ConsultaReciboEvento2010CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultaReciboEvento2010CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultaReciboEvento2010CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Xml.XmlNode Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Xml.XmlNode)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    public delegate void ConsultaReciboEvento2020CompletedEventHandler(object sender, ConsultaReciboEvento2020CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultaReciboEvento2020CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultaReciboEvento2020CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Xml.XmlNode Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Xml.XmlNode)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    public delegate void ConsultaReciboEvento2030CompletedEventHandler(object sender, ConsultaReciboEvento2030CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultaReciboEvento2030CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultaReciboEvento2030CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Xml.XmlNode Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Xml.XmlNode)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    public delegate void ConsultaReciboEvento2040CompletedEventHandler(object sender, ConsultaReciboEvento2040CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultaReciboEvento2040CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultaReciboEvento2040CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Xml.XmlNode Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Xml.XmlNode)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    public delegate void ConsultaReciboEvento2050CompletedEventHandler(object sender, ConsultaReciboEvento2050CompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class ConsultaReciboEvento2050CompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal ConsultaReciboEvento2050CompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
