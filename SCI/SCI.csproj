@@ -30,7 +30,7 @@
     <InstallUrl>https://www.irko.com.br/sci/</InstallUrl>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>46</ApplicationRevision>
+    <ApplicationRevision>47</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -58,10 +58,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>EF4875A109FBCFF02BD21C1E28A711E75D60FA9E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A35D8D56A41DAEAFCAB898ED81E3FF7A6A5CA9BB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>SCI_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>SCI_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -668,6 +668,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="SCI_1_TemporaryKey.pfx" />
+    <None Include="SCI_2_TemporaryKey.pfx" />
     <None Include="SCI_TemporaryKey.pfx" />
     <EmbeddedResource Include="View\Report\Trabalhista\Folha\FolhaPorCentroCusto.rdlc" />
     <None Include="Web References\Acesso.IRKOMPACTA\ADM.wsdl" />
