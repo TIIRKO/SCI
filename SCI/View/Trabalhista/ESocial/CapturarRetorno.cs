@@ -303,6 +303,7 @@ namespace SCI.View.Trabalhista.ESocial
                                         });
                                 }
                                 _nodeCheck.Nodes.Add(_node);
+                                break;
                             }
                             else
                             {
