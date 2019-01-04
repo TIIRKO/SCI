@@ -357,6 +357,13 @@
               </s:restriction>
             </s:simpleType>
           </s:element>
+          <s:element minOccurs="0" name="Protocolo">
+            <s:simpleType>
+              <s:restriction base="s:string">
+                <s:maxLength value="1000" />
+              </s:restriction>
+            </s:simpleType>
+          </s:element>
           <s:element minOccurs="0" name="CdResposta">
             <s:simpleType>
               <s:restriction base="s:string">

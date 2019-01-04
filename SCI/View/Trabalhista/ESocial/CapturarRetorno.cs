@@ -257,7 +257,7 @@ namespace SCI.View.Trabalhista.ESocial
 
                                 if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "201")
                                 {
-                                    if (GravarRetorno(_retorno))
+                                    if (GravarRetorno(_retorno,""))
                                     {
                                         XmlNodeList _eventos = _retorno.GetElementsByTagName("evento");
                                         _eventos.Cast<XmlElement>().ToList().ForEach(_evento =>
@@ -294,13 +294,44 @@ namespace SCI.View.Trabalhista.ESocial
                                         break;
                                     }
                                 }
-                                else
+                                else if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "501")
                                 {
-                                    _node.Nodes.AddRange(new TreeNode[]
+
+                                    if (GravarRetorno(_retorno,_protocoEnvio))
+                                    {
+                                        _node.Nodes.AddRange(new TreeNode[]
                                         {
                                          new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
                                         ,new TreeNode("Descrição:" + _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
                                         });
+
+                                        int _cttOcor = 0;
+                                        XmlNodeList _ocorrencias = _status.GetElementsByTagName("ocorrencia");
+                                        _ocorrencias.Cast<XmlElement>().ToList().ForEach(_ocorrencia =>
+                                        {
+                                            _cttOcor++;
+                                            TreeNode _nodeOcor = new TreeNode("Ocorrencia " + _cttOcor);
+                                            _nodeOcor.Nodes.AddRange(new TreeNode[]
+                                            {
+                                                 new TreeNode("Tipo: " + _ocorrencia.GetElementsByTagName("tipo").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                                ,new TreeNode("Código: "+_ocorrencia.GetElementsByTagName("codigo").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                                ,new TreeNode("Descrição: "+_ocorrencia.GetElementsByTagName("descricao").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                            });
+                                            _node.Nodes.Add(_nodeOcor);
+                                        });
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
+                                }
+                                else
+                                {
+                                    _node.Nodes.AddRange(new TreeNode[]
+                                     {
+                                         new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                        ,new TreeNode("Descrição:" + _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                     });                                    
                                 }
                                 _nodeCheck.Nodes.Add(_node);
                                 break;
@@ -327,44 +358,79 @@ namespace SCI.View.Trabalhista.ESocial
             GetDesktop().HideLoading();
         }
 
-        private bool GravarRetorno(XmlElement _retorno)
+        private bool GravarRetorno(XmlElement _retorno, string _protocoEnvio)
         {
             List<SCI.ESocial.IRKO.ParametroGravarRetorno> _parametros = new List<SCI.ESocial.IRKO.ParametroGravarRetorno>();
-
-            XmlNodeList _eventos = _retorno.GetElementsByTagName("evento");
-
-            _eventos.Cast<XmlElement>().ToList().ForEach(_evento =>
-                {
-                    SCI.ESocial.IRKO.ParametroGravarRetorno _parametro = new SCI.ESocial.IRKO.ParametroGravarRetorno
-                    {
-                        Id = _evento.Attributes["Id"].Value
-                    };
-
-                    XmlElement _processamento = _evento.GetElementsByTagName("processamento").Cast<XmlElement>().FirstOrDefault();
-
-                    _parametro.CdResposta = _processamento.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
-                    _parametro.DescResposta = _processamento.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
-                    _parametro.DhProcessamento = _processamento.GetElementsByTagName("dhProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
-                    _parametro.VersaoAplicativoProcessamento = _processamento.GetElementsByTagName("versaoAppProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
-                    _parametro.NumeroRecibo = _evento.GetElementsByTagName("nrRecibo")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
-
-                    _parametro.Ocorrencias = _processamento.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
-                        .ConvertAll<SCI.ESocial.IRKO.Ocorrencia>(_ocorrencia => new SCI.ESocial.IRKO.Ocorrencia()
-                        {
-                             Tipo = _ocorrencia.GetElementsByTagName("tipo").Cast<XmlElement>().FirstOrDefault().InnerText
-                            ,Codigo = _ocorrencia.GetElementsByTagName("codigo").Cast<XmlElement>().FirstOrDefault().InnerText
-                            ,Descricao = _ocorrencia.GetElementsByTagName("descricao").Cast<XmlElement>().FirstOrDefault().InnerText
-                        }).ToArray();
-                    _parametros.Add(_parametro);
-                });
-
-            SCI.ESocial.IRKO.Resultado _resultado = wrESocial.GravarRetorno(Guid, _parametros.ToArray(), _retorno.OuterXml);
-            if (!_resultado.Sucesso)
+            XmlElement _status = _retorno.GetElementsByTagName("status").Cast<XmlElement>().FirstOrDefault();
+            if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "201")
             {
-                MessageBox.Show(_resultado.Mensagem);
-            }
 
-            return _resultado.Sucesso;
+                XmlNodeList _eventos = _retorno.GetElementsByTagName("evento");
+
+                _eventos.Cast<XmlElement>().ToList().ForEach(_evento =>
+                    {
+                        SCI.ESocial.IRKO.ParametroGravarRetorno _parametro = new SCI.ESocial.IRKO.ParametroGravarRetorno
+                        {
+                            Id = _evento.Attributes["Id"].Value
+                        };
+
+                        XmlElement _processamento = _evento.GetElementsByTagName("processamento").Cast<XmlElement>().FirstOrDefault();
+
+                        _parametro.CdResposta = _processamento.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+                        _parametro.DescResposta = _processamento.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+                        _parametro.DhProcessamento = _processamento.GetElementsByTagName("dhProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
+                        _parametro.VersaoAplicativoProcessamento = _processamento.GetElementsByTagName("versaoAppProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
+                        _parametro.NumeroRecibo = _evento.GetElementsByTagName("nrRecibo")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
+
+                        _parametro.Ocorrencias = _processamento.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
+                            .ConvertAll<SCI.ESocial.IRKO.Ocorrencia>(_ocorrencia => new SCI.ESocial.IRKO.Ocorrencia()
+                            {
+                                Tipo = _ocorrencia.GetElementsByTagName("tipo").Cast<XmlElement>().FirstOrDefault().InnerText
+                                ,
+                                Codigo = _ocorrencia.GetElementsByTagName("codigo").Cast<XmlElement>().FirstOrDefault().InnerText
+                                ,
+                                Descricao = _ocorrencia.GetElementsByTagName("descricao").Cast<XmlElement>().FirstOrDefault().InnerText
+                            }).ToArray();
+                        _parametros.Add(_parametro);
+                    });
+
+                SCI.ESocial.IRKO.Resultado _resultado = wrESocial.GravarRetorno(Guid, _parametros.ToArray(), _retorno.OuterXml);
+                if (!_resultado.Sucesso)
+                {
+                    MessageBox.Show(_resultado.Mensagem);
+                }
+
+                return _resultado.Sucesso;
+            }
+            else
+            {
+                SCI.ESocial.IRKO.ParametroGravarRetorno _parametro = new SCI.ESocial.IRKO.ParametroGravarRetorno
+                {
+                    Protocolo = _protocoEnvio
+                };
+
+                _parametro.CdResposta = _status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+                _parametro.DescResposta = _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+
+                _parametro.Ocorrencias = _status.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
+                    .ConvertAll<SCI.ESocial.IRKO.Ocorrencia>(_ocorrencia => new SCI.ESocial.IRKO.Ocorrencia()
+                    {
+                        Tipo = _ocorrencia.GetElementsByTagName("tipo").Cast<XmlElement>().FirstOrDefault().InnerText
+                        ,
+                        Codigo = _ocorrencia.GetElementsByTagName("codigo").Cast<XmlElement>().FirstOrDefault().InnerText
+                        ,
+                        Descricao = _ocorrencia.GetElementsByTagName("descricao").Cast<XmlElement>().FirstOrDefault().InnerText
+                    }).ToArray();
+                _parametros.Add(_parametro);
+
+                SCI.ESocial.IRKO.Resultado _resultado = wrESocial.GravarRetorno(Guid, _parametros.ToArray(), _retorno.OuterXml);
+                if (!_resultado.Sucesso)
+                {
+                    MessageBox.Show(_resultado.Mensagem);
+                }
+
+                return _resultado.Sucesso;
+            }
         }
 
 
