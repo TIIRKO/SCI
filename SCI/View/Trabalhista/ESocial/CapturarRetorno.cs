@@ -382,6 +382,10 @@ namespace SCI.View.Trabalhista.ESocial
                         _parametro.VersaoAplicativoProcessamento = _processamento.GetElementsByTagName("versaoAppProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
                         _parametro.NumeroRecibo = _evento.GetElementsByTagName("nrRecibo")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
 
+                        XmlElement _recepcao = _evento.GetElementsByTagName("recepcao").Cast<XmlElement>().FirstOrDefault();
+                        _parametro.Protocolo = _recepcao.GetElementsByTagName("protocoloEnvioLote").Cast<XmlElement>().FirstOrDefault().InnerText;
+
+
                         _parametro.Ocorrencias = _processamento.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
                             .ConvertAll<SCI.ESocial.IRKO.Ocorrencia>(_ocorrencia => new SCI.ESocial.IRKO.Ocorrencia()
                             {
