@@ -353,21 +353,21 @@
           <s:element minOccurs="0" name="Id">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>
           <s:element minOccurs="0" name="Protocolo">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>
           <s:element minOccurs="0" name="CdResposta">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -381,14 +381,14 @@
           <s:element minOccurs="0" name="DhProcessamento">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>
           <s:element minOccurs="0" name="VersaoAplicativoProcessamento">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>
@@ -396,7 +396,7 @@
           <s:element minOccurs="0" name="NumeroRecibo">
             <s:simpleType>
               <s:restriction base="s:string">
-                <s:maxLength value="1000" />
+                <s:maxLength value="2048" />
               </s:restriction>
             </s:simpleType>
           </s:element>

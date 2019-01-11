@@ -371,7 +371,7 @@ namespace SCI.View.Trabalhista.ESocial
                     {
                         SCI.ESocial.IRKO.ParametroGravarRetorno _parametro = new SCI.ESocial.IRKO.ParametroGravarRetorno
                         {
-                            Id = _evento.Attributes["Id"].Value
+                            Id = _evento.Attributes["Id"].Value,
                         };
 
                         XmlElement _processamento = _evento.GetElementsByTagName("processamento").Cast<XmlElement>().FirstOrDefault();
@@ -383,7 +383,7 @@ namespace SCI.View.Trabalhista.ESocial
                         _parametro.NumeroRecibo = _evento.GetElementsByTagName("nrRecibo")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
 
                         XmlElement _recepcao = _evento.GetElementsByTagName("recepcao").Cast<XmlElement>().FirstOrDefault();
-                        _parametro.Protocolo = _recepcao.GetElementsByTagName("protocoloEnvioLote").Cast<XmlElement>().FirstOrDefault().InnerText;
+                        _parametro.Protocolo = _recepcao.GetElementsByTagName("protocoloEnvioLote")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
 
 
                         _parametro.Ocorrencias = _processamento.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
