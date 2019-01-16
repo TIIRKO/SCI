@@ -332,6 +332,7 @@ namespace SCI.View.Trabalhista.ESocial
                                          new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
                                         ,new TreeNode("Descrição:" + _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
                                      });
+                                    _nodeCheck.Nodes.Add(_node);
                                     break;
                                 }
                                 _nodeCheck.Nodes.Add(_node);
