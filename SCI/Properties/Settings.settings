@@ -54,13 +54,13 @@
       <Value Profile="(Default)">https://www.irko.com.br:443/csp/prgdcn/DCN.WebService.ESocial.cls</Value>
     </Setting>
     <Setting Name="SCI_Reinf_ProducaoRestrita_Retorno_ConsultasReinf" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://preprodefdreinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc</Value>
+      <Value Profile="(Default)">https://preprodefdreinf.receita.fazenda.gov.br/WsREINFConsultas/ConsultasReinf.svc</Value>
     </Setting>
     <Setting Name="SCI_Reinf_Producao_Envio_RecepcaoLoteReinf" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">https://reinf.receita.fazenda.gov.br/WsREINF/RecepcaoLoteReinf.svc</Value>
     </Setting>
     <Setting Name="SCI_Reinf_Producao_Retorno_ConsultasReinf" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">https://reinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc</Value>
+      <Value Profile="(Default)">https://reinf.receita.fazenda.gov.br/WsREINFConsultas/ConsultasReinf.svc</Value>
     </Setting>
     <Setting Name="SCI_Acesso_IRKOMPACTA_Service" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://187.32.61.1:57772/csp/admsys/ADM.WebService.Acesso.cls</Value>

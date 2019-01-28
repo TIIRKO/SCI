@@ -201,7 +201,8 @@ namespace SCI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://preprodefdreinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://preprodefdreinf.receita.fazenda.gov.br/WsREINFConsultas/ConsultasReinf.sv" +
+            "c")]
         public string SCI_Reinf_ProducaoRestrita_Retorno_ConsultasReinf {
             get {
                 return ((string)(this["SCI_Reinf_ProducaoRestrita_Retorno_ConsultasReinf"]));
@@ -221,7 +222,7 @@ namespace SCI.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://reinf.receita.fazenda.gov.br/WsREINF/ConsultasReinf.svc")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://reinf.receita.fazenda.gov.br/WsREINFConsultas/ConsultasReinf.svc")]
         public string SCI_Reinf_Producao_Retorno_ConsultasReinf {
             get {
                 return ((string)(this["SCI_Reinf_Producao_Retorno_ConsultasReinf"]));
