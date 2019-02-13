@@ -23,7 +23,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="ServiceSoap", Namespace="http://www.irko.com.br")]
@@ -121,26 +121,28 @@ namespace SCI.ESocial.IRKO.DCTF {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://www.irko.com.br/DCN.WebService.ESocial.GravarRetorno", RequestNamespace="http://www.irko.com.br", ResponseNamespace="http://www.irko.com.br", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public ResultadoGravarRetorno GravarRetorno(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno) {
+        public ResultadoGravarRetorno GravarRetorno(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno, string xmlRetorno) {
             object[] results = this.Invoke("GravarRetorno", new object[] {
                         Guid,
-                        ListaParametroGravarRetorno});
+                        ListaParametroGravarRetorno,
+                        xmlRetorno});
             return ((ResultadoGravarRetorno)(results[0]));
         }
         
         /// <remarks/>
-        public void GravarRetornoAsync(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno) {
-            this.GravarRetornoAsync(Guid, ListaParametroGravarRetorno, null);
+        public void GravarRetornoAsync(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno, string xmlRetorno) {
+            this.GravarRetornoAsync(Guid, ListaParametroGravarRetorno, xmlRetorno, null);
         }
         
         /// <remarks/>
-        public void GravarRetornoAsync(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno, object userState) {
+        public void GravarRetornoAsync(string Guid, ParametroGravarRetorno[] ListaParametroGravarRetorno, string xmlRetorno, object userState) {
             if ((this.GravarRetornoOperationCompleted == null)) {
                 this.GravarRetornoOperationCompleted = new System.Threading.SendOrPostCallback(this.OnGravarRetornoOperationCompleted);
             }
             this.InvokeAsync("GravarRetorno", new object[] {
                         Guid,
-                        ListaParametroGravarRetorno}, this.GravarRetornoOperationCompleted, userState);
+                        ListaParametroGravarRetorno,
+                        xmlRetorno}, this.GravarRetornoOperationCompleted, userState);
         }
         
         private void OnGravarRetornoOperationCompleted(object arg) {
@@ -228,7 +230,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -346,7 +348,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -391,7 +393,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -399,6 +401,8 @@ namespace SCI.ESocial.IRKO.DCTF {
     public partial class ParametroGravarRetorno {
         
         private string idField;
+        
+        private string protocoloField;
         
         private string cdRespostaField;
         
@@ -419,6 +423,16 @@ namespace SCI.ESocial.IRKO.DCTF {
             }
             set {
                 this.idField = value;
+            }
+        }
+        
+        /// <remarks/>
+        public string Protocolo {
+            get {
+                return this.protocoloField;
+            }
+            set {
+                this.protocoloField = value;
             }
         }
         
@@ -484,7 +498,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -520,7 +534,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoEventoPendente))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoGravarRetorno))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(ResultadoGravarEnvio))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -590,7 +604,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -611,7 +625,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -620,7 +634,7 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2634.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3221.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -629,11 +643,11 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void GravarEnvioCompletedEventHandler(object sender, GravarEnvioCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GravarEnvioCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -655,11 +669,11 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void GravarRetornoCompletedEventHandler(object sender, GravarRetornoCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GravarRetornoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -681,11 +695,11 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void ListarEventoPendenteCompletedEventHandler(object sender, ListarEventoPendenteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarEventoPendenteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -707,11 +721,11 @@ namespace SCI.ESocial.IRKO.DCTF {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     public delegate void ListarRetornoPendenteCompletedEventHandler(object sender, ListarRetornoPendenteCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3062.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListarRetornoPendenteCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

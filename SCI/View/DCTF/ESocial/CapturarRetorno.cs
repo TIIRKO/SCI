@@ -338,6 +338,9 @@ namespace SCI.View.DCTF.ESocial
                     Id = _evento.Attributes["Id"].Value
                 };
 
+                XmlElement _recepcao = _evento.GetElementsByTagName("recepcao").Cast<XmlElement>().FirstOrDefault();
+                _parametro.Protocolo = _recepcao.GetElementsByTagName("protocoloEnvioLote").Cast<XmlElement>().FirstOrDefault().InnerText;
+
                 XmlElement _processamento = _evento.GetElementsByTagName("processamento").Cast<XmlElement>().FirstOrDefault();
 
                 _parametro.CdResposta = _processamento.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
@@ -345,6 +348,8 @@ namespace SCI.View.DCTF.ESocial
                 _parametro.DhProcessamento = _processamento.GetElementsByTagName("dhProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
                 _parametro.VersaoAplicativoProcessamento = _processamento.GetElementsByTagName("versaoAppProcessamento").Cast<XmlElement>().FirstOrDefault().InnerText;
                 _parametro.NumeroRecibo= _evento.GetElementsByTagName("nrRecibo")?.Cast<XmlElement>().FirstOrDefault()?.InnerText;
+
+
 
                 _parametro.Ocorrencias = _processamento.GetElementsByTagName("ocorrencia")?.Cast<XmlElement>().ToList()
                     .ConvertAll<SCI.ESocial.IRKO.DCTF.Ocorrencia>(_ocorrencia => new SCI.ESocial.IRKO.DCTF.Ocorrencia()
@@ -358,7 +363,7 @@ namespace SCI.View.DCTF.ESocial
                 _parametros.Add(_parametro);
             });
 
-            SCI.ESocial.IRKO.DCTF.Resultado _resultado = wrESocial.GravarRetorno(Guid, _parametros.ToArray());
+            SCI.ESocial.IRKO.DCTF.Resultado _resultado = wrESocial.GravarRetorno(Guid, _parametros.ToArray(), _retorno.OuterXml);
             if (!_resultado.Sucesso)
             {
                 MessageBox.Show(_resultado.Mensagem);
