@@ -579,6 +579,7 @@ namespace SCI.View.DCTF.REINF
             imgEnviar.BackgroundImage = null;
             pctLoad.Visible = true;
             lblLoad.Visible = true;
+
         }
     }
 }
