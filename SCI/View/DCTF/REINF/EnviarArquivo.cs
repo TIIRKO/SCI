@@ -62,6 +62,7 @@ namespace SCI.View.DCTF.REINF
                             _wr = new Reinf.ProducaoRestrita.Envio.RecepcaoLoteReinf
                             {
                                 Credentials = CredentialCache.DefaultCredentials
+
                             };
                         }
                     }
