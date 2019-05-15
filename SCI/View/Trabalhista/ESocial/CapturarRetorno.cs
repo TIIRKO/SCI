@@ -257,7 +257,7 @@ namespace SCI.View.Trabalhista.ESocial
 
                                 if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "201")
                                 {
-                                    if (GravarRetorno(_retorno,""))
+                                    if (GravarRetorno(_retorno, ""))
                                     {
                                         XmlNodeList _eventos = _retorno.GetElementsByTagName("evento");
                                         _eventos.Cast<XmlElement>().ToList().ForEach(_evento =>
@@ -297,7 +297,7 @@ namespace SCI.View.Trabalhista.ESocial
                                 else if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "501")
                                 {
 
-                                    if (GravarRetorno(_retorno,_protocoEnvio))
+                                    if (GravarRetorno(_retorno, _protocoEnvio))
                                     {
                                         _node.Nodes.AddRange(new TreeNode[]
                                         {
@@ -322,6 +322,16 @@ namespace SCI.View.Trabalhista.ESocial
                                     }
                                     else
                                     {
+                                        break;
+                                    }
+                                } else if (_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "69") {
+                                    if (GravarRetorno(_retorno, _protocoEnvio)) {
+                                        _node.Nodes.AddRange(new TreeNode[]
+                                        {
+                                             new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                            ,new TreeNode("Descrição:" + _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                        });
+                                        _nodeCheck.Nodes.Add(_node);
                                         break;
                                     }
                                 }
