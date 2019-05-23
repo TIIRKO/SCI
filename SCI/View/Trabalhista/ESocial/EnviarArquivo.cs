@@ -319,20 +319,41 @@ namespace SCI.View.Trabalhista.ESocial
                                     TreeNode _node = new TreeNode("Código de Resposta: " + _retorno.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText);
                                     String _textoDescricão = _retorno.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
                                     String[] _palavras = _textoDescricão.Split(' ');
-                                    if (_palavras.Length > 16) {
+                                    if (_palavras.Length > 15) {
                                         string _NovotextoDescricão = "";
                                         for (int i = 0; i < _palavras.Length; i++) {
-                                            if ((i % 16 == 0) && (i!=0))
+                                            if ((i % 15 == 0) && (i!=0))
                                             {
-                                                _NovotextoDescricão = _NovotextoDescricão + "\r\n" + _palavras[i];
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
+                                                _node.Nodes.AddRange(new TreeNode[]
+                                                 {
+                                                    new TreeNode(_NovotextoDescricão)
+                                                });
+                                                _NovotextoDescricão = "";
                                             }
                                             else
                                             {
-                                                _NovotextoDescricão = _NovotextoDescricão + " "+ _palavras[i];
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
                                             }
                                         }
-                                        TreeNode _nodeResposta = new TreeNode("Descrição:" + _NovotextoDescricão);
-                                        _node.Nodes.Add(_nodeResposta);
+
+                                        if (_NovotextoDescricão != "")
+                                        {
+                                            _node.Nodes.AddRange(new TreeNode[]
+                                                {
+                                                    new TreeNode(_NovotextoDescricão)
+                                               });
+                                        }
+
+                                        _nodeCheck.Nodes.Add(_node);
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        _node.Nodes.AddRange(new TreeNode[]
+                                        {
+                                            new TreeNode("Descrição: " + _textoDescricão)
+                                        });
                                     }
                                     _nodeCheck.Nodes.Add(_node);
                                     break;
