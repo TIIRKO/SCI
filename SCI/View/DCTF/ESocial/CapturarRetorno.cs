@@ -339,9 +339,11 @@ namespace SCI.View.DCTF.ESocial
                                         {
                                             new TreeNode("Descrição: " + _textoDescricão)
                                         });
+                                        break;
                                     }
                                 }
                                 _nodeCheck.Nodes.Add(_node);
+
                             }
                             else
                             {

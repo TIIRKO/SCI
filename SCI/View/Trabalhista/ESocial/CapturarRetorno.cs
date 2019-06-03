@@ -379,9 +379,10 @@ namespace SCI.View.Trabalhista.ESocial
                                         {
                                             new TreeNode("Descrição: " + _textoDescricão)
                                         });
+                                        _nodeCheck.Nodes.Add(_node);
+                                        break;
                                     }
                                 }
-                                _nodeCheck.Nodes.Add(_node);
                             }
                             else
                             {
