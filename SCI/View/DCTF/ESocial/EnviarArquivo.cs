@@ -306,54 +306,101 @@ namespace SCI.View.DCTF.ESocial
                                     MessageBox.Show(ex.Message);
                                     break;
                                 }
-
-                                if (GravarEnvio(_retorno, _listaId, _cnpjTransmissao))
+                                if (_retorno.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "301")
                                 {
-                                    _contador++;
-                                    TreeNode _node = new TreeNode("Arquivo " + _contador.ToString());
-                                    TreeNode _nodeId = new TreeNode("ID");
-                                    _nodeId.Nodes.AddRange(_listaId.ConvertAll<TreeNode>(_id => new TreeNode(_id)).ToArray());
-                                    _node.Nodes.Add(_nodeId);
-
-                                    TreeNode _nodeRetorno = new TreeNode("Retorno");
-
-                                    TreeNode _nodeResposta = new TreeNode(
-                                        _retorno.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText);
-
-                                    if (_retorno.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "201")
+                                    TreeNode _node = new TreeNode("Código de Resposta: " + _retorno.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText);
+                                    String _textoDescricão = _retorno.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+                                    String[] _palavras = _textoDescricão.Split(' ');
+                                    if (_palavras.Length > 15)
                                     {
-                                        _nodeResposta.Nodes.Add(new TreeNode("Data: " +
-                                           _retorno.GetElementsByTagName("dhRecepcao").Cast<XmlElement>().FirstOrDefault().InnerText));
-                                        _nodeResposta.Nodes.Add(new TreeNode("Varsão: " +
-                                           _retorno.GetElementsByTagName("versaoAplicativoRecepcao").Cast<XmlElement>().FirstOrDefault().InnerText));
-                                        _nodeResposta.Nodes.Add(new TreeNode("Protocolo: " +
-                                          _retorno.GetElementsByTagName("protocoloEnvio").Cast<XmlElement>().FirstOrDefault().InnerText));
+                                        string _NovotextoDescricão = "";
+                                        for (int i = 0; i < _palavras.Length; i++)
+                                        {
+                                            if ((i % 15 == 0) && (i != 0))
+                                            {
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
+                                                _node.Nodes.AddRange(new TreeNode[]
+                                                 {
+                                                    new TreeNode(_NovotextoDescricão)
+                                                });
+                                                _NovotextoDescricão = "";
+                                            }
+                                            else
+                                            {
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
+                                            }
+                                        }
+
+                                        if (_NovotextoDescricão != "")
+                                        {
+                                            _node.Nodes.AddRange(new TreeNode[]
+                                                {
+                                                    new TreeNode(_NovotextoDescricão)
+                                               });
+                                        }
+
+                                        _nodeCheck.Nodes.Add(_node);
+                                        break;
                                     }
                                     else
                                     {
-                                        XmlNodeList _ocorrencias = _retorno.GetElementsByTagName("ocorrencia");
-
-                                        _ocorrencias.Cast<XmlElement>().ToList().ForEach(_ocorrencia =>
+                                        _node.Nodes.AddRange(new TreeNode[]
                                         {
-                                            TreeNode trnOcur = new TreeNode("Ocorrência");
-                                            trnOcur.Nodes.AddRange(new TreeNode[]
+                                            new TreeNode("Descrição: " + _textoDescricão)
+                                        });
+                                    }
+                                    _nodeCheck.Nodes.Add(_node);
+                                    break;
+                                }
+                                else {
+                                    if (GravarEnvio(_retorno, _listaId, _cnpjTransmissao))
+                                    {
+                                        _contador++;
+                                        TreeNode _node = new TreeNode("Arquivo " + _contador.ToString());
+                                        TreeNode _nodeId = new TreeNode("ID");
+                                        _nodeId.Nodes.AddRange(_listaId.ConvertAll<TreeNode>(_id => new TreeNode(_id)).ToArray());
+                                        _node.Nodes.Add(_nodeId);
+
+                                        TreeNode _nodeRetorno = new TreeNode("Retorno");
+
+                                        TreeNode _nodeResposta = new TreeNode(
+                                            _retorno.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText);
+
+                                        if (_retorno.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText == "201")
+                                        {
+                                            _nodeResposta.Nodes.Add(new TreeNode("Data: " +
+                                               _retorno.GetElementsByTagName("dhRecepcao").Cast<XmlElement>().FirstOrDefault().InnerText));
+                                            _nodeResposta.Nodes.Add(new TreeNode("Varsão: " +
+                                               _retorno.GetElementsByTagName("versaoAplicativoRecepcao").Cast<XmlElement>().FirstOrDefault().InnerText));
+                                            _nodeResposta.Nodes.Add(new TreeNode("Protocolo: " +
+                                              _retorno.GetElementsByTagName("protocoloEnvio").Cast<XmlElement>().FirstOrDefault().InnerText));
+                                        }
+                                        else
+                                        {
+                                            XmlNodeList _ocorrencias = _retorno.GetElementsByTagName("ocorrencia");
+
+                                            _ocorrencias.Cast<XmlElement>().ToList().ForEach(_ocorrencia =>
                                             {
+                                                TreeNode trnOcur = new TreeNode("Ocorrência");
+                                                trnOcur.Nodes.AddRange(new TreeNode[]
+                                                {
                                                  new TreeNode(_ocorrencia.GetElementsByTagName("codigo").Cast<XmlElement>().FirstOrDefault().InnerText)
                                                 ,new TreeNode(_ocorrencia.GetElementsByTagName("descricao").Cast<XmlElement>().FirstOrDefault().InnerText)
                                                 ,new TreeNode(_ocorrencia.GetElementsByTagName("tipo").Cast<XmlElement>().FirstOrDefault().InnerText)
-                                            });
-                                            _nodeResposta.Nodes.Add(trnOcur);
+                                                });
+                                                _nodeResposta.Nodes.Add(trnOcur);
+                                            }
+                                             );
                                         }
-                                         );
-                                    }
-                                    _nodeRetorno.Nodes.Add(_nodeResposta);
+                                        _nodeRetorno.Nodes.Add(_nodeResposta);
 
-                                    _node.Nodes.Add(_nodeRetorno);
-                                    _nodeCheck.Nodes.Add(_node);
-                                }
-                                else
-                                {
-                                    break;
+                                        _node.Nodes.Add(_nodeRetorno);
+                                        _nodeCheck.Nodes.Add(_node);
+                                    }
+                                    else
+                                    {
+                                        break;
+                                    }
                                 }
                             }
                             else

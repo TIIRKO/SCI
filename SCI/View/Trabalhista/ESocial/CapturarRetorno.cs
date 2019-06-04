@@ -337,13 +337,48 @@ namespace SCI.View.Trabalhista.ESocial
                                 }
                                 else
                                 {
-                                    _node.Nodes.AddRange(new TreeNode[]
-                                     {
-                                         new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
-                                        ,new TreeNode("Descrição:" + _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
-                                     });
-                                    _nodeCheck.Nodes.Add(_node);
-                                    break;
+                                    String _textoDescricão = _status.GetElementsByTagName("descResposta").Cast<XmlElement>().FirstOrDefault().InnerText;
+                                    String[] _palavras = _textoDescricão.Split(' ');
+                                    if (_palavras.Length > 15)
+                                    {
+                                        string _NovotextoDescricão = "";
+                                        for (int i = 0; i < _palavras.Length; i++)
+                                        {
+                                            if ((i % 15 == 0) && (i != 0))
+                                            {
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
+                                                _node.Nodes.AddRange(new TreeNode[]
+                                                 {
+                                                    new TreeNode(_NovotextoDescricão)
+                                                });
+                                                _NovotextoDescricão = "";
+                                            }
+                                            else
+                                            {
+                                                _NovotextoDescricão = _NovotextoDescricão + " " + _palavras[i];
+                                            }
+                                        }
+
+                                        if (_NovotextoDescricão != "")
+                                        {
+                                            _node.Nodes.AddRange(new TreeNode[]
+                                                {
+                                                    new TreeNode(_NovotextoDescricão)
+                                               });
+                                        }
+
+                                        _nodeCheck.Nodes.Add(_node);
+                                        break;
+                                    }
+                                    else { 
+                                         _node.Nodes.AddRange(new TreeNode[]
+                                         {
+                                             new TreeNode("Código :"+_status.GetElementsByTagName("cdResposta").Cast<XmlElement>().FirstOrDefault().InnerText)
+                                            ,new TreeNode("Descrição:" + _textoDescricão)
+                                         });
+                                        _nodeCheck.Nodes.Add(_node);
+                                        break;
+                                    }
                                 }
                                 _nodeCheck.Nodes.Add(_node);
                             }
